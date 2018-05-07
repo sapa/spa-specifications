@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+## SPA Specifications
 
-You can use the [editor on GitHub](https://github.com/sapa/spa-specifications/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The future database of the [Foundation SAPA](https://www.sapa.swiss) will be published as linked data and build on the conceptual models [CIDOC-CRM](http://www.cidoc-crm.org), [FBBRoo](https://www.ifla.org/publications/node/11240) and [RiC](https://en.wikipedia.org/wiki/Records_in_Contexts "Records in Context").
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The implementation of these models is guided by the following ideas:
 
-### Markdown
+* Keep it simple
+* ...
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The documentation is structured along basic concepts:
 
-```markdown
-Syntax highlighted code block
+* Agents (individual persons, groups, institutions)
+* Works (performing arts works and their orginals such as written plays or musical compositions)
+* Activities
+* Objects
+* Places
 
-# Header 1
-## Header 2
-### Header 3
+URIs will be structured according to these categories.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sapa/spa-specifications/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* Agents: `http://data.performing-arts.ch/**a**/id`
+* Works: `http://data.performing-arts.ch/**w**/id`
+* Activities: `http://data.performing-arts.ch/**a**/id`
+* Objects: `http://data.performing-arts.ch/**o**/id`
+* Places: `http://data.performing-arts.ch/**p**/id`
