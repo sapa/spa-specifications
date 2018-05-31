@@ -7,6 +7,7 @@ The implementation of these models is guided by the following ideas:
 * Classes and properties come from the three reference ontologies.
 * They are further specified by a domain-specific [vocabulary](https://sapa.github.io/spa-vocabulary/).
 * There is distinction between core entities (such as persons or works) represent IRL phenomena and should be linkable and entities that serve primarily auxiliary functions. The latter may be represented as blank nodes without an URI.
+* Make individual decisions when complexity is actually needed. If this is the case, think about providing a reduced version of the same information in a simple way. (Names are a good example here. They can be pretty complicated but sometimes you just need a simple label.)
 
 ### Basic Concepts
 
@@ -25,7 +26,7 @@ The documentation tries to avoid redundancy. An object that appears in relation 
 Some concepts to more or less to all entities:
 
 * [Identities (types, identifiers, appellations)](identities.html)
-* Time
+* [Time](time.md)
 * Spatial Coordinates
 * Dimension
 
