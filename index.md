@@ -25,8 +25,8 @@ The documentation tries to avoid redundancy. An object that appears in relation 
 
 Some concepts to more or less to all entities:
 
-* [Identities (types, identifiers, appellations)](identities.html)
-* [Time](time.md)
+* [Identities (types, identifiers, appellations)](identities/)
+* [Time](time/)
 * Spatial Coordinates
 * Dimension
 
