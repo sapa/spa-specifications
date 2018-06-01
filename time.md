@@ -38,7 +38,7 @@ A `E52 Time-Span` is used for both defining a point in time like a specific date
 			]
 		]
 	] ;
-	crm:P95i_was_formed_by [ a crm:E68_Dissolution ;
+	crm:P99i_was_dissolved_by [ a crm:E68_Dissolution ;
 		crm:P4_has_time-span [ a crm:E52_Time-Span ;
 			rdfs:label "1989" ;
 			crm:P81_ongoing_throughout [ a crm:E61_Time_Primitive ;
