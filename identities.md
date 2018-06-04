@@ -38,7 +38,7 @@ Inventory numbers are stored according to CIDOC and RiC.
 @prefix ric: <http://yet-to-be-defined-ric-implementation/>.
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/o/123456> a crm:E24_Physical_Man-Made_Thing ;
+<http://data.performing-arts.ch/o/123456> a crm:E24_Physical_Man-Made_Thing, ric:E1_Record ;
 	crm:P1_is_identified_by [ a crm:E42_Identifier ;
 		rdf:value "E-123456" ;
 		crm:P2_has_type spav:specific-identifier .
