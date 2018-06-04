@@ -20,7 +20,7 @@ The documentation is structured along the following basic concepts:
 * Actors/Agents (individual persons, groups, institutions)
 * Works (performing arts works and their originals such as written plays or musical compositions)
 * Objects
-* Places
+* [Places](places)
 * Records
 
 The documentation tries to avoid redundancy. An object that appears in relation to an agent is not further described there.
@@ -29,8 +29,8 @@ The documentation tries to avoid redundancy. An object that appears in relation 
 
 Some concepts to more or less to all entities:
 
-* [Identities (types, identifiers, appellations)](identities/)
-* [Time](time/)
+* [Identities (types, identifiers, appellations)](identities)
+* [Time](time)
 * Spatial Coordinates
 * Dimension
 
