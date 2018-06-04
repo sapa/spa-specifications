@@ -36,4 +36,4 @@ A legal body in the city of Bern:
 
 <!-- TODO: Should the address be machine readable? -->
 
-Currently, places and their relations to other entities are only represented according to the CIDOC-CRM as RiC does not provide additional depth of information and my be inferred later.
+Currently, places and their relations to other entities are only represented according to the CIDOC-CRM as RiC does not provide additional depth of information and may be inferred later.
