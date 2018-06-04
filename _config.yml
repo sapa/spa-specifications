@@ -9,7 +9,7 @@ title:               SPA Specifications
 # tagline:             'Specification of linked data structures for the future database of Foundation SAPA.'
 description:         'Specification of linked data structures for the future database of <a href="http://sapa.swiss">Foundation SAPA</a>.'
 url:                 http://sapa.swiss
-baseurl:             ''
+# baseurl:             ''
 # paginate:            5
 
 # # About/contact
