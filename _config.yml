@@ -8,17 +8,7 @@ relative_permalinks: false
 title:               SPA Specifications
 # tagline:             'Specification of linked data structures for the future database of Foundation SAPA.'
 description:         'Specification of linked data structures for the future database of <a href="http://sapa.swiss">Foundation SAPA</a>.'
-site:
-  url:               https://sapa.github.io/spa-specifications/
-# baseurl:             ''
-# paginate:            5
-
-# # About/contact
-# author:
-#   name:              Mark Otto
-#   url:               https://twitter.com/mdo
-#   email:             markdotto@gmail.com
-
+url:                 https://sapa.github.io/spa-specifications/
 
 github:
   repo:             'http://github.com/sapa/spa-specifications'
