@@ -21,7 +21,7 @@
       {% if node.title != null %}
         {% if node.layout == "page" %}
             {% if node.exclude_from_nav != "true" %}
-              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | relative_url }}" title="{{ node.url }} - {{ relative_url }}">{{ node.title }}</a>
             {% endif %}
         {% endif %}
       {% endif %}
