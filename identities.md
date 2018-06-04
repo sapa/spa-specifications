@@ -23,23 +23,27 @@ Standard classes as defined by CIDOC-CRM, FRBRoo and RiC are used. Own class-lik
 
 The primary identifier is the URI of a resource. URIs are structured according to the five basic categories:
 
-* Actors: `http://data.performing-arts.ch/a/id`
-* Works: `http://data.performing-arts.ch/w/id`
-* Objects: `http://data.performing-arts.ch/o/id`
-* Places: `http://data.performing-arts.ch/p/id`
-* Records: `http://data.performing-arts.ch/r/id`
+* Actors: `http://data.performing-arts.ch/a/<ID>`
+* Works: `http://data.performing-arts.ch/w/<ID>`
+* Objects: `http://data.performing-arts.ch/o/<ID>`
+* Places: `http://data.performing-arts.ch/p/<ID>`
+* Records: `http://data.performing-arts.ch/r/<ID>`
 
 <!-- TODO: Do the categories need separate prefixes or can the ids simply start with the category letter? a-id -->
 
+Inventory numbers are stored according to CIDOC and RiC.
+
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix ric: <http://yet-to-be-defined-ric-implementation/>.
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/o/123456> a crm:E24_Physical_Man-Made_Thing ;
 	crm:P1_is_identified_by [ a crm:E42_Identifier ;
 		rdf:value "E-123456" ;
 		crm:P2_has_type spav:specific-identifier .
-	] .
+	] ;
+	ric:P2_Local_Identifier "E-123456" .
 ```
 
 ### Links to external identifiers
@@ -79,6 +83,8 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses (`E3
 		crm:P2_has_type spav:appellation-description
 	] .
 ```
+
+<!-- TODO: provide example with times -->
 
 <!-- TODO: How to handle different languages? -->
 
