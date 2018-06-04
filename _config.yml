@@ -1,6 +1,26 @@
-title: SPA Specifications
-theme: jekyll-theme-cayman
-plugins:
-  - jekyll-sitemap
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: false
 
-permalink: pretty
+# Setup
+title:               SPA Specifications
+# tagline:             'Specification of linked data structures for the future database of Foundation SAPA.'
+description:         'Specification of linked data structures for the future database of <a href="http://sapa.swiss">Foundation SAPA</a>.'
+url:                 http://sapa.swiss
+baseurl:             ''
+# paginate:            5
+
+# # About/contact
+# author:
+#   name:              Mark Otto
+#   url:               https://twitter.com/mdo
+#   email:             markdotto@gmail.com
+
+
+github:
+  repo:             'http://github.com/sapa/spa-specifications'
+
+# Custom vars
+version:             '0.0.1'

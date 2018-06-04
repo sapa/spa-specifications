@@ -1,4 +1,7 @@
-## Time
+---
+layout: page
+title: Time
+---
 
 <!-- TODO: Can we call this a date, when CIDOC-CRM suggest a different understanding of that term? -->
 

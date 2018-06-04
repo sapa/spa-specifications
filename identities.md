@@ -1,4 +1,7 @@
-## Identities
+---
+layout: page
+title: Identities
+---
 
 Before any statements are made about an entity, it should be identified. Such identifications are happening on three different levels: by attributing a type, by assigning one or more identifiers and by documenting real world appellations used in regard to the entity.
 
