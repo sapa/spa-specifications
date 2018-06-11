@@ -37,3 +37,56 @@ A legal body in the city of Bern:
 <!-- TODO: Should the address be machine readable? -->
 
 Currently, places and their relations to other entities are only represented according to the CIDOC-CRM as RiC does not provide additional depth of information and may be inferred later.
+
+
+Relations between places:
+
+```ttl
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+
+<http://data.performing-arts.ch/p/1> a crm:E53_Place ;
+    rdfs:label "Altstetten" ;
+    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+            rdf:value "Altstetten"
+    ] ;
+    owl:sameAs <http://geonames.org/6295513>,
+        <http://www.wikidata.org/entity/Q445711> ;
+    crm:P89_falls_within <http://data.performing-arts.ch/p/2> .
+
+<http://data.performing-arts.ch/p/2> a crm:E53_Place ;
+    rdfs:label "Zürich" ;
+    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+            rdf:value "Zürich"
+    ] ;
+    owl:sameAs <http://geonames.org/6295513>,
+        <http://www.wikidata.org/entity/Q72>,
+        <http://d-nb.info/gnd/4068038-1>,
+        <http://viaf.org/viaf/185144783004419863241>,
+        <http://classifications.data.admin.ch/municipality/261> ;
+    crm:P89_falls_within <http://data.performing-arts.ch/p/3> .
+
+<http://data.performing-arts.ch/p/3> a crm:E53_Place ;
+    rdfs:label "Kanton Zürich" ;
+    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+            rdf:value "Kanton Zürich"
+    ] ;
+    owl:sameAs <http://geonames.org/2657895>,
+        <http://www.wikidata.org/entity/Q11943>,
+        <http://d-nb.info/gnd/4068041-1>,
+        <http://viaf.org/viaf/140174177> ;
+    crm:P89_falls_within <http://data.performing-arts.ch/p/4> .
+
+<http://data.performing-arts.ch/p/4> a crm:E53_Place ;
+    rdfs:label "Schweiz" ;
+    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+            rdf:value "Schweiz"
+    ] ;
+    owl:sameAs <http://geonames.org/2658434>,
+        <http://www.wikidata.org/entity/Q39>,
+        <http://d-nb.info/gnd/4053881-3>,
+        <http://viaf.org/viaf/154323889> .
+
+
+```
+
+
