@@ -18,7 +18,7 @@ The following examples are not complete as documentation of the implementations 
 <http://data.performing-arts.ch/a/643827> a crm:E21_Person, ric:E4_Agent ;
 	ric:P32_Type spav:agenttype-person ;
 	rdfs:label "Firstname Lastname" ;
-	crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ] ;
+	crm:P1_is_identified_by [ a crm:E41_Appellation ] ;
 	ric:P33_Identity_Type spav:identitytype-given ;
 	crm:P98i_was_born [ a crm:E67Birth ;
 		crm:P4_has_time-span [ a crm:E52_Time-Span ] ;
@@ -45,7 +45,7 @@ The following examples are not complete as documentation of the implementations 
 	ric:P32_Type spav:agenttype-legalbody ;
 	crm:P2_has_type spav:grouptype-producer ;
 	rdfs:label "Theatre ABC" ;
-	crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ] ;
+	crm:P1_is_identified_by [ a crm:E41_Appellation ] ;
 	ric:P33_Identity_Type spav:identitytype-given ;
 	crm:P95i_was_formed_by [ a crm:E66_Formation ] ;
 	crm:P99i_was_dissolved_by [ a crm:E68_Dissolution ] ;

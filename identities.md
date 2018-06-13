@@ -63,7 +63,7 @@ Links to other databases such as Wikidata are considered to be objective and sta
 
 ### Appellations
 
-The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses (`E35 Title`, `E35 Title`, `E44 Place Appellation`, `E82 Actor Appellation`, ...) to document appellations. Here the subclasses are used in respect to the type of entity that is described. However, in all cases the structure is the same and as appellations are never used for more than one entity, they are modeled as blank nodes.
+The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to document appellations. Here subclasses are only used if they express a specific form of appellation in respect to the type of entity that is described (`E35 Title`, `E48 Place Name`). However, in all cases the structure is the same and as appellations are never used for more than one entity, they are modeled as blank nodes.
 
 `rdfs:Label` is additionally used for the most common appellation in order to facilitate database requests that are not primarily interested in appellations.
 
@@ -73,10 +73,10 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses (`E3
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/123456> rdfs:label "Konzert Theater Bern" ;
-	crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ;
+	crm:P1_is_identified_by [ a crm:E41_Appellation ;
 		rdf:value = "Konzert Theater Bern" ;
 		crm:P2_has_type spav:appellation-officialname ;
-		crm:P139_has_alternative_form [ a crm:E82_Actor_Appellation ;
+		crm:P139_has_alternative_form [ a crm:E41_Appellation ;
 			rdf:value "KTB" ;
 			crm:P2_has_type spav:appellation-abbreviation
 		]

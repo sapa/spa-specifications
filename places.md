@@ -26,7 +26,7 @@ A legal body in the city of Bern:
 
 <http://data.performing-arts.ch/p/12345> a crm:E53_Place ;
 	rdfs:label "Bern";
-	crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+	crm:P87_is_identified_by [ a crm:E48_Place_Name ;
 		rdf:value "Bern"
 	] ;
 	owl:sameAs <http://www.wikidata.org/entity/Q70>, <http://d-nb.info/gnd/4005762-8>, <http://geonames.org/2661552>, <http://classifications.data.admin.ch/municipality/351> .
@@ -35,6 +35,8 @@ A legal body in the city of Bern:
 <!-- TODO: add geo data -->
 
 <!-- TODO: Should the address be machine readable? -->
+
+<!-- TODO: Use E48 Place Name instead of E44? -->
 
 Currently, places and their relations to other entities are only represented according to the CIDOC-CRM as RiC does not provide additional depth of information and may be inferred later.
 
@@ -46,7 +48,7 @@ Relations between places:
 
 <http://data.performing-arts.ch/p/1> a crm:E53_Place ;
     rdfs:label "Altstetten" ;
-    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+    crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Altstetten"
     ] ;
     owl:sameAs <http://geonames.org/6295513>,
@@ -55,7 +57,7 @@ Relations between places:
 
 <http://data.performing-arts.ch/p/2> a crm:E53_Place ;
     rdfs:label "Zürich" ;
-    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+    crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Zürich"
     ] ;
     owl:sameAs <http://geonames.org/6295513>,
@@ -67,7 +69,7 @@ Relations between places:
 
 <http://data.performing-arts.ch/p/3> a crm:E53_Place ;
     rdfs:label "Kanton Zürich" ;
-    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+    crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Kanton Zürich"
     ] ;
     owl:sameAs <http://geonames.org/2657895>,
@@ -79,7 +81,7 @@ Relations between places:
 
 <http://data.performing-arts.ch/p/4> a crm:E53_Place ;
     rdfs:label "Schweiz" ;
-    crm:P87_is_identified_by [ a crm:E44_Place_Appellation ;
+    crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Schweiz"
     ] ;
     owl:sameAs <http://geonames.org/2658434>,
