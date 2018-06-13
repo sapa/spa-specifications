@@ -17,7 +17,7 @@ The implementation of these models is guided by the following ideas:
 
 The documentation is structured along the following basic concepts:
 
-* Actors/Agents (individual persons, groups, institutions)
+* [Actors/Agents](actors) (individual persons, groups, institutions)
 * Works (performing arts works and their originals such as written plays or musical compositions)
 * Objects
 * [Places](places)

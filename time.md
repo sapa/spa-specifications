@@ -13,9 +13,9 @@ CIDOC-CRM provides various and complex ways to represent times. Here only two cl
 [ a crm:E52_Time-Span ;
 	rdfs:label "1999" ;
 	crm:P81_ongoing_throughout [ a crm:E61_Time_Primitive ;
-		rdf:value "1999-01-01"^^xsd:date;
+		rdf:value "1999-01-01"^^xsd:date
 	], [ a crm:E61_Time_Primitive ;
-		rdf:value "1999-12-31"^^xsd:date;
+		rdf:value "1999-12-31"^^xsd:date
 	]
 ]
 ```
@@ -35,9 +35,9 @@ A `E52 Time-Span` is used for both defining a point in time like a specific date
 		crm:P4_has_time-span [ a crm:E52_Time-Span ;
 			rdfs:label "1961" ;
 			crm:P81_ongoing_throughout [ a crm:E61_Time_Primitive ;
-				rdf:value "1961-01-01"^^xsd:date;
+				rdf:value "1961-01-01"^^xsd:date
 			], [ a crm:E61_Time_Primitive ;
-				rdf:value "1961-12-31"^^xsd:date;
+				rdf:value "1961-12-31"^^xsd:date
 			]
 		]
 	] ;
@@ -45,9 +45,9 @@ A `E52 Time-Span` is used for both defining a point in time like a specific date
 		crm:P4_has_time-span [ a crm:E52_Time-Span ;
 			rdfs:label "1989" ;
 			crm:P81_ongoing_throughout [ a crm:E61_Time_Primitive ;
-				rdf:value "1989-01-01"^^xsd:date;
+				rdf:value "1989-01-01"^^xsd:date
 			], [ a crm:E61_Time_Primitive ;
-				rdf:value "1989-12-31"^^xsd:date;
+				rdf:value "1989-12-31"^^xsd:date
 			]
 		]
 	] .

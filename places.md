@@ -88,7 +88,7 @@ Relations between places:
         <http://viaf.org/viaf/154323889> .
 ```
 
-Places in Switzerland are described by a maximum of four levels. The example above defines Altstetten, a place that 1934 became a district of the city of Zurich. Zurich as a current Swiss municipality, represents the next (and most relevant) level. Municipalities fall within districts, which are ommited here. Instead each municipality is directly asigned to a canton. All cantons then are part of Switzerland as a state.
+Places in Switzerland are described by a maximum of four levels. The example above defines Altstetten, a place that 1934 became a district of the city of Zurich. Zurich as a current Swiss municipality, represents the next (and most relevant) level. Municipalities fall within districts, which are omitted here. Instead each municipality is directly assigned to a canton. All cantons then are part of Switzerland as a state.
 
 Foreign places are only represented with two levels, i.e. Paris is a place in France.
 
