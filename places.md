@@ -73,7 +73,8 @@ Relations between places:
     owl:sameAs <http://geonames.org/2657895>,
         <http://www.wikidata.org/entity/Q11943>,
         <http://d-nb.info/gnd/4068041-1>,
-        <http://viaf.org/viaf/140174177> ;
+        <http://viaf.org/viaf/140174177>,
+        <http://classifications.data.admin.ch/canton/ZH> ;
     crm:P89_falls_within <http://data.performing-arts.ch/p/4> .
 
 <http://data.performing-arts.ch/p/4> a crm:E53_Place ;
@@ -85,8 +86,9 @@ Relations between places:
         <http://www.wikidata.org/entity/Q39>,
         <http://d-nb.info/gnd/4053881-3>,
         <http://viaf.org/viaf/154323889> .
-
-
 ```
 
+Places in Switzerland are described by a maximum of four levels. The example above defines Altstetten, a place that 1934 became a district of the city of Zurich. Zurich as a current Swiss municipality, represents the next (and most relevant) level. Municipalities fall within districts, which are ommited here. Instead each municipality is directly asigned to a canton. All cantons then are part of Switzerland as a state.
+
+Foreign places are only represented with two levels, i.e. Paris is a place in France.
 
