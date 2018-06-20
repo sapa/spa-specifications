@@ -52,6 +52,14 @@ The following examples are not complete as documentation of the implementations 
 	ric:R273_is_successor_of <http://data.performing-arts.ch/a/354227> ;
 	ric:R269_is_predecessor_of <http://data.performing-arts.ch/a/921648> ;
 	crm:P107_has_current_or_former_member <http://data.performing-arts.ch/a/539818> ;
+	crm:P144i_gained_member_by [ a crm:E85_Joining ; 
+		crm:P143_joined <http://data.performing-arts.ch/a/539818> ;
+		crm:P4_has_time-span [ a crm:E52_Time-Span ]
+	]
+	crm:P146_lost_member_by [ a crm:E86_Leaving ; 
+		crm:P145_separated <http://data.performing-arts.ch/a/539818> ;
+		crm:P4_has_time-span [ a crm:E52_Time-Span ]
+	]
 	crm_P76_has_contact_point [ a crm:E45_Address ;
 		rdf:value "Street, Place, Country" ;
 		crm_P2_has_type spav:contactpoint-address
@@ -74,12 +82,10 @@ The following examples are not complete as documentation of the implementations 
 		crm:P2_has_type spav:activity-stagemanagement ;
 		crm:P16_used_specific_object <http://data.performing-arts.ch/o/165290> ;
 		crm:P4_has_time-span [ a crm:E52_Time-Span ]
-
 	] ;
 	ric:R210_is_subject_of <http://data.performing-arts.ch/r/456> .
 ```
 
-<!-- TODO: How to represent the temporalities of memberships? -->
 <!-- TODO: How to represent that one actor/agent controls another? -->
 <!-- TODO: Change the two identical blank node addresses into into one entity with URI? -->
 
