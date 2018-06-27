@@ -10,8 +10,8 @@ Before any statements are made about an entity, it should be identified. Such id
 Standard classes as defined by CIDOC-CRM, FRBRoo and RiC are used. Own class-like categories from the [Swiss Performing Arts vocabulary](https://sapa.github.io/spa-vocabulary/) are attributed trough `crm:P2_has_type`. On both levels more that one classification can be used.
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
-@prefix ric: <http://yet-to-be-defined-ric-implementation/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/123456> a crm:E40_Legal_Body, ric:E4_Agent ;
@@ -32,13 +32,13 @@ The primary identifier is the URI of a resource. URIs are structured according t
 * Places: `http://data.performing-arts.ch/p/<ID>`
 * Records: `http://data.performing-arts.ch/r/<ID>`
 
-<!-- TODO: Do the categories need separate prefixes or can the ids simply start with the category letter? a-id -->
+Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of specific category: `http://data.performing-arts.ch/x/<ID>`.
 
-Inventory numbers are stored according to CIDOC and RiC.
+Inventory numbers are stored according to CIDOC-CRM and RiC.
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
-@prefix ric: <http://yet-to-be-defined-ric-implementation/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/o/123456> a crm:E24_Physical_Man-Made_Thing, ric:E1_Record ;
@@ -68,13 +68,13 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to d
 `rdfs:Label` is additionally used for the most common appellation in order to facilitate database requests that are not primarily interested in appellations.
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
-@prefix ric: <http://yet-to-be-defined-ric-implementation/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/123456> rdfs:label "Konzert Theater Bern" ;
 	crm:P1_is_identified_by [ a crm:E41_Appellation ;
-		rdf:value = "Konzert Theater Bern" ;
+		rdf:value "Konzert Theater Bern" ;
 		crm:P2_has_type spav:appellation-officialname ;
 		crm:P139_has_alternative_form [ a crm:E41_Appellation ;
 			rdf:value "KTB" ;
@@ -87,9 +87,27 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to d
 	] .
 ```
 
-<!-- TODO: provide example with times -->
+Any literal value such as `rdfs:label` or `rdf:value` may be used with language tags.
 
-<!-- TODO: How to handle different languages? -->
+```ttl
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/a/452987> a crm:E21_Person, ric:E4_Agent ;
+	ric:P32_Type spav:agenttype-person ;
+	rdfs:label "Fyodor Mikhaylovich Dostoyevsky"@en ;
+	rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
+	rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
+	rdfs:label "Fëdor Michajlovič Dostoevskij"@it ;
+	crm:P1_is_identified_by [ 
+		a crm:E41_Appellation ;
+		rdf:value "Fyodor Mikhaylovich Dostoyevsky"@en ;
+		rdf:value "Fjodor Michailowitsch Dostojewski"@de ;
+		rdf:value "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
+		rdf:value "Fëdor Michajlovič Dostoevskij"@it
+	] .
+```
 
 <!-- TODO: Other examples, e.g. for work titles? -->
 

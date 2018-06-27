@@ -14,7 +14,7 @@ The first two receive URIs, while the third kind is represented with blank nodes
 A legal body in the city of Bern:
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://data.performing-arts.ch/a/12345> a crm:E40_Legal_Body ;
 	crm:P74_has_current _or_former_residence [ a crm:E53_Place ;
@@ -36,15 +36,13 @@ A legal body in the city of Bern:
 
 <!-- TODO: Should the address be machine readable? -->
 
-<!-- TODO: Use E48 Place Name instead of E44? -->
-
 Currently, places and their relations to other entities are only represented according to the CIDOC-CRM as RiC does not provide additional depth of information and may be inferred later.
 
 
 Relations between places:
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://data.performing-arts.ch/p/1> a crm:E53_Place ;
     rdfs:label "Altstetten" ;

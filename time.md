@@ -8,7 +8,7 @@ title: Time
 CIDOC-CRM provides various and complex ways to represent times. Here only two classes are used: `E52 Time-Span` and `E61 Time Primitive`. The combination of these solves the main issue encountered when trying to make human definitions of points in time machine-readable as they provide a method to add precise (although idealized) time-stamps.
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 [ a crm:E52_Time-Span ;
 	rdfs:label "1999" ;
@@ -28,7 +28,7 @@ As instances of both classes are never re-used and only accessed through a speci
 A `E52 Time-Span` is used for both defining a point in time like a specific date or a longer period. <!-- TODO: Do I actually have use cases for time periods? --> However, if two events mark the beging and the end of such a time period, there are two simple `E52 Time-Span` instances like in the formation and dissolution of a legal body.
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://data.performing-arts.ch/a/123456> a crm:E40_Legal_Body ;
 	crm:P95i_was_formed_by [ a crm:E66_Formation ;

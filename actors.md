@@ -11,8 +11,8 @@ The following examples are not complete as documentation of the implementations 
 ### Persons
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
-@prefix ric: <http://yet-to-be-defined-ric-implementation/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/643827> a crm:E21_Person, ric:E4_Agent ;
@@ -37,8 +37,8 @@ The following examples are not complete as documentation of the implementations 
 ### Groups and Legal Bodies
 
 ```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
-@prefix ric: <http://yet-to-be-defined-ric-implementation/>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/638821> a crm:E40_Legal_Body, ric:E4_Agent ;
