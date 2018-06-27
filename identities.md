@@ -32,7 +32,7 @@ The primary identifier is the URI of a resource. URIs are structured according t
 * Places: `http://data.performing-arts.ch/p/<ID>`
 * Records: `http://data.performing-arts.ch/r/<ID>`
 
-Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of specific category: `http://data.performing-arts.ch/x/<ID>`.
+Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of a special category: `http://data.performing-arts.ch/x/<ID>`.
 
 Inventory numbers are stored according to CIDOC-CRM and RiC.
 
