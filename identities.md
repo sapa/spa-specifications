@@ -34,6 +34,8 @@ The primary identifier is the URI of a resource. URIs are structured according t
 
 Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of a special category: `http://data.performing-arts.ch/x/<ID>`.
 
+Entities that are considered to be not yet identified also have a separate name space: `http://data.performing-arts.ch/u/<ID>`.
+
 Inventory numbers are stored according to CIDOC-CRM and RiC.
 
 ```ttl
