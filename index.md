@@ -19,7 +19,7 @@ The documentation is structured along the following basic concepts:
 
 * [Actors/Agents](actors) (individual persons, groups, institutions)
 * Works (performing arts works and their originals such as written plays or musical compositions)
-* Objects
+* Objects (incl. [Venues](venues))
 * [Places](places)
 * Records
 
@@ -27,7 +27,7 @@ The documentation tries to avoid redundancy. An object that appears in relation 
 
 ###  General Concepts
 
-Some concepts to more or less to all entities:
+Some concepts apply to more or less to all entities:
 
 * [Identities (types, identifiers, appellations)](identities)
 * [Time](time)
