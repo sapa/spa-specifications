@@ -9,7 +9,8 @@ Venues can contain each other in that sense that a building can contain one or m
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix frbr: <http://www.cidoc-crm.org/frbr/>
+@prefix frbr: <http://www.cidoc-crm.org/frbr/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/o/31552> a crm:E22_Man-Made_Object ;
     rdfs:label "Kaserne Basel" ;
