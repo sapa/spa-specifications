@@ -29,7 +29,7 @@ A legal body in the city of Bern:
 	crm:P87_is_identified_by [ a crm:E48_Place_Name ;
 		rdf:value "Bern"
 	] ;
-	owl:sameAs <http://www.wikidata.org/entity/Q70>, <http://d-nb.info/gnd/4005762-8>, <http://geonames.org/2661552>, <http://classifications.data.admin.ch/municipality/351> .
+	owl:sameAs <http://www.wikidata.org/entity/Q70>, <http://d-nb.info/gnd/4005762-8>, <http://geonames.org/2661552/>, <http://classifications.data.admin.ch/municipality/351> .
 ```
 
 <!-- TODO: add geo data -->
@@ -49,7 +49,7 @@ Relations between places:
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Altstetten"
     ] ;
-    owl:sameAs <http://geonames.org/6295513>,
+    owl:sameAs <http://geonames.org/6295513/>,
         <http://www.wikidata.org/entity/Q445711> ;
     crm:P89_falls_within <http://data.performing-arts.ch/p/2> .
 
@@ -58,7 +58,7 @@ Relations between places:
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Zürich"
     ] ;
-    owl:sameAs <http://geonames.org/6295513>,
+    owl:sameAs <http://geonames.org/6295513/>,
         <http://www.wikidata.org/entity/Q72>,
         <http://d-nb.info/gnd/4068038-1>,
         <http://viaf.org/viaf/185144783004419863241>,
@@ -70,7 +70,7 @@ Relations between places:
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Kanton Zürich"
     ] ;
-    owl:sameAs <http://geonames.org/2657895>,
+    owl:sameAs <http://geonames.org/2657895/>,
         <http://www.wikidata.org/entity/Q11943>,
         <http://d-nb.info/gnd/4068041-1>,
         <http://viaf.org/viaf/140174177>,
@@ -82,7 +82,7 @@ Relations between places:
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
             rdf:value "Schweiz"
     ] ;
-    owl:sameAs <http://geonames.org/2658434>,
+    owl:sameAs <http://geonames.org/2658434/>,
         <http://www.wikidata.org/entity/Q39>,
         <http://d-nb.info/gnd/4053881-3>,
         <http://viaf.org/viaf/154323889> .
