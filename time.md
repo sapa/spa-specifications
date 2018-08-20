@@ -3,29 +3,21 @@ layout: page
 title: Time
 ---
 
-<!-- TODO: Can we call this a date, when CIDOC-CRM suggest a different understanding of that term? -->
-
-CIDOC-CRM provides various and complex ways to represent times. Here only two classes are used: `E52 Time-Span` and `E61 Time Primitive`. The combination of these solves the main issue encountered when trying to make human definitions of points in time machine-readable as they provide a method to add precise (although idealized) time-stamps.
+In the CIDOC-CRM any statement about time is at the end a statement about a time-span, which can be defined in regard to is maximum and minimum boundaries. Here only two properties are used to describe a `E52 Time-Span`: `crm:P82a_begin_of_the_begin` and `crm:P82b_end_of_the_end`. Additionally, `rdfs:label` is used to provide an easier access.
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 [ a crm:E52_Time-Span ;
 	rdfs:label "1999" ;
-	crm:P81_ongoing_throughout [ a crm:E61_Time_Primitive ;
-		rdf:value "1999-01-01"^^xsd:date
-	], [ a crm:E61_Time_Primitive ;
-		rdf:value "1999-12-31"^^xsd:date
-	]
+	crm:P82a_begin_of_the_begin "1999-01-01"^^xsd:date ;
+	crm:P82b_end_of_the_end "1999-12-31"^^xsd:date
 ]
 ```
-<!-- TODO: Do I need two `E61 Time Primitive`s here? -->
 
-A `E52 Time-Span` provides the opportunity to be defined by values that either refer to the minimum or maximum temporal extend. Here only the property for minimum extends (`P81_ongoing_throughout`) are used.
+As instances of `E52 Time-Span` are never re-used and only accessed through a specific actor, object or activity they belong to, they are both rendered as conceptual blank nodes, i.e. with x-based URIs. The only exceptions are theatre seasons.
 
-As instances of both classes are never re-used and only accessed through a specific actor, object or activty they belong to, they are both rendered as blank nodes. The only exceptions are theatre seasons.
-
-A `E52 Time-Span` is used for both defining a point in time like a specific date or a longer period. <!-- TODO: Do I actually have use cases for time periods? --> However, if two events mark the beging and the end of such a time period, there are two simple `E52 Time-Span` instances like in the formation and dissolution of a legal body.
+A `E52 Time-Span` is used for both defining a point in time like a specific date or a longer period. <!-- TODO: Do I actually have use cases for time periods? --> However, if two events mark the beginning and the end of such a time period, there are two simple `E52 Time-Span` instances like in the formation and dissolution of a legal body.
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -34,26 +26,20 @@ A `E52 Time-Span` is used for both defining a point in time like a specific date
 	crm:P95i_was_formed_by [ a crm:E66_Formation ;
 		crm:P4_has_time-span [ a crm:E52_Time-Span ;
 			rdfs:label "1961" ;
-			crm:P81_ongoing_throughout [ a crm:E61_Time_Primitive ;
-				rdf:value "1961-01-01"^^xsd:date
-			], [ a crm:E61_Time_Primitive ;
-				rdf:value "1961-12-31"^^xsd:date
-			]
+			crm:P82a_begin_of_the_begin "1961-01-01"^^xsd:date ;
+			crm:P82b_end_of_the_end "1961-12-31"^^xsd:date
 		]
 	] ;
 	crm:P99i_was_dissolved_by [ a crm:E68_Dissolution ;
 		crm:P4_has_time-span [ a crm:E52_Time-Span ;
 			rdfs:label "1989" ;
-			crm:P81_ongoing_throughout [ a crm:E61_Time_Primitive ;
-				rdf:value "1989-01-01"^^xsd:date
-			], [ a crm:E61_Time_Primitive ;
-				rdf:value "1989-12-31"^^xsd:date
-			]
+			crm:P82a_begin_of_the_begin "1989-01-01"^^xsd:date ;
+			crm:P82b_end_of_the_end "1989-12-31"^^xsd:date
 		]
 	] .
 ```
 
-<!-- TODO: Model a person with a birthyear/day. Needs a birth event! -->
+<!-- TODO: Model a person with a year/day of birth. Needs a birth event! -->
 
 <!-- TODO: Model the temporal validity of a name. Difficult ... -->
 
