@@ -7,20 +7,16 @@ Before any statements are made about an entity, it should be identified. Such id
 
 ### Types
 
-Standard classes as defined by CIDOC-CRM, FRBRoo and RiC are used. Own class-like categories from the [Swiss Performing Arts vocabulary](https://sapa.github.io/spa-vocabulary/) are attributed trough `crm:P2_has_type`. On both levels more that one classification can be used.
+Standard classes as defined by CIDOC-CRM, FRBRoo and RiC (respectively its alternatives) are used. Own class-like categories from the [Swiss Performing Arts vocabulary](https://sapa.github.io/spa-vocabulary/) are attributed trough `crm:P2_has_type`. On both levels more that one classification can be used.
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/123456> a crm:E40_Legal_Body, ric:E4_Agent ;
-	crm:P2_has_type spav:XXX ;
-	ric:P32_Type spav:XXX ;
-	ric:P33_Identity_Type spav:XXX .
+<http://data.performing-arts.ch/a/123456> a crm:E40_Legal_Body, prov:Agent ;
+	crm:P2_has_type spav:xxx .
 ```
-
-<!-- TODO: Rethink RiC types. -->
 
 ### Internal identifiers
 
@@ -32,23 +28,26 @@ The primary identifier is the URI of a resource. URIs are structured according t
 * Places: `http://data.performing-arts.ch/p/<ID>`
 * Records: `http://data.performing-arts.ch/r/<ID>`
 
+<!-- TODO: Do I have to distinguish here between works and performances? -->
+
 Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of a special category: `http://data.performing-arts.ch/x/<ID>`.
 
 Entities that are considered to be not yet identified also have a separate name space: `http://data.performing-arts.ch/u/<ID>`.
 
-Inventory numbers are stored according to CIDOC-CRM and RiC.
+Inventory numbers are stored according to CIDOC-CRM and RiC/PREMIS.
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
+@prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/o/123456> a crm:E24_Physical_Man-Made_Thing, ric:E1_Record ;
+<http://data.performing-arts.ch/o/123456> a crm:E24_Physical_Man-Made_Thing, prov:Entity ;
 	crm:P1_is_identified_by [ a crm:E42_Identifier ;
 		rdf:value "E-123456" ;
-		crm:P2_has_type spav:specific-identifier .
+		crm:P2_has_type spav:xxx .
 	] ;
-	ric:P2_Local_Identifier "E-123456" .
+	premis:hasIdentifier "E-123456" .
 ```
 
 ### Links to external identifiers
@@ -71,7 +70,6 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to d
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/123456> rdfs:label "Konzert Theater Bern" ;
@@ -93,11 +91,10 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ric: <http://yet-to-be-defined-ric-implementation/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/452987> a crm:E21_Person, ric:E4_Agent ;
-	ric:P32_Type spav:agenttype-person ;
+<http://data.performing-arts.ch/a/452987> a crm:E21_Person, prov:Agent ;
 	rdfs:label "Fyodor Mikhaylovich Dostoyevsky"@en ;
 	rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
 	rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
