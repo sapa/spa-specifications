@@ -5,7 +5,7 @@ title: Identities
 
 Before any statements are made about an entity, it should be identified. Such identifications are happening on three different levels: by attributing a type, by assigning one or more identifiers and by documenting real world appellations used in regard to the entity.
 
-### Types
+### Types <a id="types"></a>
 
 Standard classes as defined by CIDOC-CRM, FRBRoo and RiC (respectively its alternatives) are used. Own class-like categories from the [Swiss Performing Arts vocabulary](https://sapa.github.io/spa-vocabulary/) are attributed trough `crm:P2_has_type`. On both levels more that one classification can be used.
 
@@ -18,7 +18,7 @@ Standard classes as defined by CIDOC-CRM, FRBRoo and RiC (respectively its alter
 	crm:P2_has_type spav:xxx .
 ```
 
-### Internal identifiers
+### Internal identifiers <a id="internal-identifiers"></a>
 
 The primary identifier is the URI of a resource. URIs are structured according to the five basic categories:
 
@@ -50,7 +50,7 @@ Inventory numbers are stored according to CIDOC-CRM and RiC/PREMIS.
 	premis:hasIdentifier "E-123456" .
 ```
 
-### Links to external identifiers
+### Links to external identifiers <a id="external-identifiers"></a>
 
 Links to other databases such as Wikidata are considered to be objective and stable. Therefore instead of the CIDOC-CRM's elaborate options to describe identifiers, a simple `owl:sameAs` is used.
 
@@ -62,7 +62,7 @@ Links to other databases such as Wikidata are considered to be objective and sta
 
 <!-- TODO: This does not allow to look for external identifiers based on categories easily. Provide SPARQL code to show all Wikidata-Entries? Or use `42 Identifier` with type Wikidata? -->
 
-### Appellations
+### Appellations <a id="appellations"></a>
 
 The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to document appellations. Here subclasses are only used if they express a specific form of appellation in respect to the type of entity that is described (`E35 Title`, `E48 Place Name`). However, in all cases the structure is the same and as appellations are never used for more than one entity, they are modeled as blank nodes.
 

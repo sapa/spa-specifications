@@ -7,7 +7,7 @@ Entities that "have the potential to perform intentional actions of kinds for wh
 
 The following examples are not complete as documentation of the implementations of `E82 Actor Appellation`, `E52 Time-Span` etc. is not repeated here.
 
-### Persons
+### Persons <a id="persons"></a>
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -34,7 +34,7 @@ The following examples are not complete as documentation of the implementations 
 
 * `rdau:P60806` = "is subject of" (a record set)
 
-### Groups and Legal Bodies
+### Groups and Legal Bodies <a id="groups"></a>
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
