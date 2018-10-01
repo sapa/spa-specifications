@@ -10,8 +10,8 @@ The implementation of these models is guided by the following ideas:
 
 * Classes and properties come from the three reference ontologies.
 * They are further specified by a domain-specific [vocabulary](https://sapa.github.io/spa-vocabulary/).
-* There is distinction between core entities (such as persons or works) represent IRL phenomena and should be linkable and entities that serve primarily auxiliary functions. The latter may be represented as blank nodes without an URI.
-* Make individual decisions when complexity is actually needed. If this is the case, think about providing a reduced version of the same information in a simple way. (Names are a good example here. They can be pretty complicated but sometimes you just need a simple label.)
+* There is a distinction between core entities (such as persons or works) that should be publicly addressable and entities (such as appellations) that serve primarily auxiliary functions. The latter are represented by special URIs and are shown here as blank nodes.
+* Make individual decisions in which case complexity is actually needed. If this is the case, think about providing a reduced version of the same information in a simple way. (Names are a good example here. They can be pretty complicated but sometimes one just needs a simple label.)
 
 ### Basic Concepts <a id="basic-concepts"></a>
 
@@ -22,8 +22,6 @@ The documentation is structured along the following basic concepts:
 * Objects (incl. [Venues](venues))
 * [Places](places)
 * Records
-
-The documentation tries to avoid redundancy. An object that appears in relation to an agent is not further described there.
 
 ###  General Concepts <a id="general-concepts"></a>
 

@@ -22,7 +22,7 @@ A `E52 Time-Span` is used for both defining a point in time like a specific date
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
-<http://data.performing-arts.ch/a/123456> a crm:E40_Legal_Body ;
+<http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body ;
 	crm:P95i_was_formed_by [ a crm:E66_Formation ;
 		crm:P4_has_time-span [ a crm:E52_Time-Span ;
 			rdfs:label "1961" ;
