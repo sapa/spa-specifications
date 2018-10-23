@@ -17,6 +17,7 @@ The following examples are not complete as documentation of the implementations 
 
 <http://data.performing-arts.ch/a/UUID1> a crm:E21_Person, prov:Agent ;
 	rdfs:label "Firstname Lastname" ;
+	rdfs:comment "profession" ;
 	crm:P1_is_identified_by [ a crm:E41_Appellation ] ;
 	crm:P98i_was_born [ a crm:E67Birth ;
 		crm:P4_has_time-span [ a crm:E52_Time-Span ] ;
@@ -26,6 +27,9 @@ The following examples are not complete as documentation of the implementations 
 		crm:P4_has_time-span [ a crm:E52_Time-Span ] ;
 		crm:P7_took_place_at <http://data.performing-arts.ch/p/UUID3>
 	] ;
+	crm:P74_has_current_ or_former_residence [ a crm:Place ;
+		crm:P89_falls_within <http://data.performing-arts.ch/p/UUID9>
+	] ;
 	owl:sameAs <http://www.wikidata.org/entity/Q123>, 
 	<https://d-nb.info/gnd/123456789>, 
 	<http://tls.theaterwissenschaft.ch/wiki/Firstname_Lastname> ;
@@ -33,6 +37,8 @@ The following examples are not complete as documentation of the implementations 
 ```
 
 * `rdau:P60806` = "is subject of" (a record set)
+
+<!-- TODO: nationality, memberships, comment -->
 
 ### Groups and Legal Bodies <a id="groups"></a>
 
