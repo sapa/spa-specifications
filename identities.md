@@ -77,17 +77,22 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to d
 <http://data.performing-arts.ch/a/UUID4> rdfs:label "Konzert Theater Bern" ;
 	crm:P1_is_identified_by [ a crm:E41_Appellation ;
 		rdf:value "Konzert Theater Bern" ;
-		crm:P2_has_type spav:appellation-officialname ;
+		crm:P2_has_type spav:yanuj ;
 		crm:P139_has_alternative_form [ a crm:E41_Appellation ;
 			rdf:value "KTB" ;
-			crm:P2_has_type spav:appellation-abbreviation
+			crm:P2_has_type spav:yamqk
 		]
 	] ;
 	crm:P67_is_referred_to_by [ a crm:E33_Linguistic_Object ;
 		rdf:value "Beschreibung des Theaters" ;
-		crm:P2_has_type spav:appellation-description
+		crm:P2_has_type spav:eoept
 	] .
 ```
+
+* `spav:yanuj` = "official name"
+* `spav:yamqk` = "acronym"
+* `spav:eoept` = "description"
+
 
 Any literal value such as `rdfs:label` or `rdf:value` may be used with language tags.
 
