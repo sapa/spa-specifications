@@ -9,7 +9,7 @@ Venues can contain each other in that sense that a building can contain one or m
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix frbr: <http://www.cidoc-crm.org/frbr/> .
+@prefix frbr: <http://erlangen-crm.org/efrbroo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
