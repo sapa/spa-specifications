@@ -25,18 +25,15 @@ A legal body in the city of Bern:
 	]
 
 <http://data.performing-arts.ch/p/UUID2> a crm:E53_Place ;
-	rdfs:label "Bern";
-	crm:P87_is_identified_by [ a crm:E48_Place_Name ;
-		rdf:value "Bern"
-	] ;
+	rdfs:label "Bern"@de, "Berne"@fr, "Berna"@it, "Bern"@en ;
+	crm:P87_is_identified_by <http://data.performing-arts.ch/p/UUID2/a> ;
 	owl:sameAs <http://www.wikidata.org/entity/Q70>, <http://d-nb.info/gnd/4005762-8>, <http://geonames.org/2661552/>, <http://classifications.data.admin.ch/municipality/351> .
+
+<http://data.performing-arts.ch/p/UUID2/a> a crm:E48_Place_Name ;
+	rdf:value "Bern"@de, "Berne"@fr, "Berna"@it, "Bern"@en .
 ```
 
-<!-- TODO: add geo data -->
-
-<!-- TODO: Should the address be machine readable? -->
-
-Currently, places and their relations to other entities are only represented according to the CIDOC-CRM as RiC does not provide additional depth of information and may be inferred later.
+Names of places are given in four languages as `crm:E48_Place_Name` and are repeated as `rdfs:label` for easier usage. The URI of the `crm:E48_Place_Name` is the same as that of the `crm:E53_Place` with an additional `/a`. For the sake of brevity this notation is abridged in the following examples.
 
 Relations between places:
 
