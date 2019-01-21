@@ -33,7 +33,7 @@ A legal body in the city of Bern:
 	rdf:value "Bern"@de, "Berne"@fr, "Berna"@it, "Bern"@en .
 ```
 
-Names of places are given in four languages as `crm:E48_Place_Name` and are repeated as `rdfs:label` for easier usage. The URI of the `crm:E48_Place_Name` is the same as that of the `crm:E53_Place` with an additional `/a`. For the sake of brevity this notation is abridged in the following examples.
+Names of places are given in four languages as `crm:E48_Place_Name` and are repeated as `rdfs:label` for easier usage. The URI of the `crm:E48_Place_Name` is the same as that of the `crm:E53_Place` with an additional `/a`. Therefore, each place may only have a single name in each language. For the sake of brevity this notation is abridged in the following examples.
 
 Relations between places:
 
