@@ -44,6 +44,7 @@ In the case of a re-staging the plan refers to the work instance of the original
 * `spav:mnawx`= "performance art"
 * `spav:hlosp`= "German language premiere"
 
+<!-- TODO: crm:P9_consists_of or frbr:has_part ?-->
 
 ### Activities <a id="activities"></a>
 
@@ -97,20 +98,55 @@ FRBRoo and CIDOC-CRM provide two ways to connect the individual performance work
 
 The usage of activities is necessary to provide certain information but as this information might not be relevant in all cases the direct connection between `F20 Performance Work` and `F25 Performance Plan` is also used. The same applies to sources (such as literary works) and documentations (such as video recordings) as they are also rendered as FRBRoo individuals.
 
-All contributions to performing arts productions are rendered as instances of `E7 Activity` and classified with the [SPA vocabulary](https://sapa.github.io/spa-vocabulary/). Alternative designations for an activity are preserved as optional `RDFS:label`.
+All contributions to performing arts productions are rendered as instances of `E7 Activity` and classified with the [SPA vocabulary](https://sapa.github.io/spa-vocabulary/). Alternative designations for an activity are preserved with an optional `rdfs:label`.
 
 
 ### Additional Information <a id="additional-information"></a>
 
-<!-- TODO: acts and scenes -->
-<!-- TODO: language rdau:P60099? wdt:P407? P72_has_language is only for E33_Linguistic_Object -->
+<!-- TODO: acts and scenes  act_count, scene_count / spa:number_of_acts, spa_number_of_scenes xsd:int -->
+<!-- TODO: language rdau:P60099 / subtitles schema:subtitleLanguage -->
+
+The spoken language and possible subtitles are defined as properties of the `frbroo:F20_Performance_Work`.
+
+```ttl
+@prefix frbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix schema: <http://schema.org/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/w/UUID1/w> a frbroo:F20_Performance_Work ;
+	schema:inLanguage spav:lgita ;
+    schema:subtitleLanguage spav:lgdeu .
+```
+
+* `spav:lgita`= "Italian"
+* `spav:lgdeu`= "German"
 
 
+The [venue](venues) is linked with the default performance.
+
+```ttl
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix frbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance  ;
+	crm:P8_took_place_ on_or_within <http://data.performing-arts.ch/t/UUID2>
+
+<http://data.performing-arts.ch/t/UUID2> a crm:E22_Man-Made_Object ;
+    rdfs:label "Theater Matte" ;
+    crm:P2_has_type spav:dwmkn ;
+
+```
+
+* `spav:dwmkn`= "venue"
 
 
-### Source and Documentation <a id="source-documentation"></a>
+### Sources <a id="sources"></a>
 
-FRBRoo is also used to describe the literary reference of a production and its documentation.
+FRBRoo is also used to describe the literary reference of a production.
+
+<!-- TODO: Store all sources temporality in one entity? -->
+<!-- TODO: Extend vocabulary. -->
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -122,29 +158,91 @@ FRBRoo is also used to describe the literary reference of a production and its d
     frbroo:R14_incorporates <http://data.performing-arts.ch/w/UUID2> .
 
 <http://data.performing-arts.ch/w/UUID2> a frbroo:F22_Self-Contained_Expression ;
-	rdfs:label "El mètode Grönholm" .
-
-<http://data.performing-arts.ch/w/UUID2/w> a frbroo:F1_Work ;
-	rdfs:label "El mètode Grönholm" ;
-	frbroo:R12_is_realised_in <http://data.performing-arts.ch/w/UUID2> .
+	rdfs:label "Die Grönholm-Methode" ;
+	crm:P2_has_type spav:WORK-ADAPTION ;
+    frbroo:R14_incorporates <http://data.performing-arts.ch/w/UUID5> .
 
 <http://data.performing-arts.ch/x/UUID3> a frbroo:F28_Expression_Creation  ;
-	frbroo:R19_created_a_realisation_of <http://data.performing-arts.ch/w/UUID2/w> ;
+	crm:P2_has_type spav:mudcw ;
 	frbroo:R17_created <http://data.performing-arts.ch/w/UUID2> ;
 	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID4> .
 
 <http://data.performing-arts.ch/a/UUID4> a crm:E21_Person  ;
+	rdfs:label "Corinne Thalmann" .
+
+<http://data.performing-arts.ch/w/UUID5> a frbroo:F22_Self-Contained_Expression ;
+	rdfs:label "Die Grönholm-Methode" ;
+	crm:P2_has_type spav:WORK-TRANSLATION ;
+    frbroo:R14_incorporates <http://data.performing-arts.ch/w/UUID8> .
+
+<http://data.performing-arts.ch/x/UUID6> a frbroo:F28_Expression_Creation  ;
+	crm:P2_has_type spav:muwyo ;
+	frbroo:R17_created <http://data.performing-arts.ch/w/UUID5> ;
+	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID7> .
+
+<http://data.performing-arts.ch/a/UUID7> a crm:E21_Person  ;
+	rdfs:label "Stefanie Gerhold" .
+
+<http://data.performing-arts.ch/w/UUID8> a frbroo:F22_Self-Contained_Expression ;
+	rdfs:label "El mètode Grönholm" .
+	crm:P2_has_type spav:WORK-ORIGINAL .
+
+<http://data.performing-arts.ch/x/UUID9> a frbroo:F28_Expression_Creation  ;
+	crm:P2_has_type spav:muiuk ;
+	frbroo:R17_created <http://data.performing-arts.ch/w/UUID8> ;
+	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID10> .
+
+<http://data.performing-arts.ch/a/UUID10> a crm:E21_Person  ;
 	rdfs:label "Jordi Galceran" .
-
-<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance  ;
-    frbroo:R25_performed <http://data.performing-arts.ch/w/UUID1> .
-
-<http://data.performing-arts.ch/w/UUID3> a frbroo:frbroo:F26_Recording  ;
 ```
 
-While here the performance plan is rendered to incorporate its literary source directly, in fact there may be several layers of translation and adaption in between.
+* `spav:mudcw`= "adaption"
+* `spav:muwyo`= "translation"
+* `spav:muiuk`= "authorship"
 
-<!-- TODO: Do we need types for works? -->
+While each `F22 Self-Contained Expression` according to FRBRoo comes with a `F1 Work`, the rendering of the letter is omitted for the sake of reducing complexity.
+
+<!-- TODO: add vocab for texts types -->
+
+### Documentation <a id="documentation"></a>
+
+```ttl
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix frbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/w/UUID1> a frbroo:F25_Performance_Plan ;
+    rdfs:label "Die Grönholm-Methode" ;
+    frbroo:R14_incorporates <http://data.performing-arts.ch/w/UUID2> .
+
+<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance  ;
+    frbroo:R25_performed <http://data.performing-arts.ch/w/UUID1> ;
+    crm:P9_consists_of <http://data.performing-arts.ch/w/UUID1/p/UUID2> .
+
+<http://data.performing-arts.ch/w/UUID1/p/UUID2> a frbroo:F31_Performance  ;
+    crm:P4_has_time-span [ a crm:E52_Time-Span ;
+			rdfs:label "5.4.2017" .
+		] .
+
+<http://data.performing-arts.ch/w/UUID3> a frbroo:F29_Recording_Event  ;
+	 frbroo:R20_recorded <http://data.performing-arts.ch/w/UUID1/p/UUID2> ;
+	crm:P9_consists_of <http://data.performing-arts.ch/w/UUID4> .
+
+<http://data.performing-arts.ch/w/UUID4> a crm:E7_Activity ;
+	crm:P2_has_type spav:mujig ;
+	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> ;
+	frbroo:R22_realised <http://data.performing-arts.ch/w/UUID6> .
+
+<http://data.performing-arts.ch/a/UUID5> a crm:P21_Person ;
+	rdfs:label "NN" .
+
+<http://data.performing-arts.ch/w/UUID6> a frbroo:F21_Recording_Work  .
+<!-- TODO: add identifier -->
+
+```
+
+* `spav:mujig`= "camera operation"
+
 
 ### Season
 
