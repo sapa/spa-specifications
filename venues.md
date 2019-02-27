@@ -30,7 +30,7 @@ Venues can contain each other in that sense that a building can contain one or m
     ] .
     
 <http://data.performing-arts.ch/a/UUID4> a crm:E40_Legal_Body, prov:Agent ;
-	rdfs:label "Kaserne Basel" .
+    rdfs:label "Kaserne Basel" .
 
 <http://data.performing-arts.ch/o/UUID3> a crm:E22_Man-Made_Object ;
     rdfs:label "Reithalle" ;
@@ -38,7 +38,7 @@ Venues can contain each other in that sense that a building can contain one or m
     crm:P8i_witnessed <http://data.performing-arts.ch/w/UUID5> .
 
 <http://data.performing-arts.ch/w/UUID5> a frbr:F31_Performance  ;
-	rdfs:label "Worst Case Szenarios" .
+    rdfs:label "Worst Case Szenarios" .
 
 <http://data.performing-arts.ch/p/UUID2> a crm:P53_Place ;
     rdfs:label "Basel" .

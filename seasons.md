@@ -15,25 +15,25 @@ Performing arts productions are usually organized in annual seasons lasting from
     rdfs:label "Hello, Mister MacGuffin!" .
 
 <http://data.performing-arts.ch/x/UUID2> a frbr:F28_Expression_Creation  ;
-	frbr:R17_created <http://data.performing-arts.ch/w/UUID1> ;
-	crm:P10_falls_within <http://data.performing-arts.ch/e/UUID3> ,
-		<http://data.performing-arts.ch/e/UUID4> .
+    frbr:R17_created <http://data.performing-arts.ch/w/UUID1> ;
+    crm:P10_falls_within <http://data.performing-arts.ch/e/UUID3> ,
+        <http://data.performing-arts.ch/e/UUID4> .
 
 <http://data.performing-arts.ch/e/UUID3> a crm:E4_Period ;
-	rdfs:label "Season 2017/18" .
+    rdfs:label "Season 2017/18" .
 
 <http://data.performing-arts.ch/e/UUID4> a crm:E7_Activity ;
-	rdfs:label "Directorship Barbara Frey, Schauspielhaus Zürich" ;
+    rdfs:label "Directorship Barbara Frey, Schauspielhaus Zürich" ;
     crm:P4_has_time-span [ a crm:E52_Time-Span ;
-			rdfs:label "1.8.2009 -" ;
-			crm:P82a_begin_of_the_begin "2009-08-01"^^xsd:date .
-		] ;
-	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> ,
-		<http://data.performing-arts.ch/a/UUID5> .
+        rdfs:label "1.8.2009 -" ;
+        crm:P82a_begin_of_the_begin "2009-08-01"^^xsd:date .
+    ] ;
+    crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> ,
+        <http://data.performing-arts.ch/a/UUID5> .
 
 <http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body  ;
-	rdfs:label "Schaupielhaus Zürich" .
+    rdfs:label "Schaupielhaus Zürich" .
 
 <http://data.performing-arts.ch/a/UUID6> a crm:E21_Person  ;
-	rdfs:label "Barbara Frey" .
+    rdfs:label "Barbara Frey" .
 ```

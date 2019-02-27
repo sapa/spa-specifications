@@ -9,9 +9,9 @@ In the CIDOC-CRM any statement about time is at the end a statement about a time
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 [ a crm:E52_Time-Span ;
-	rdfs:label "1999" ;
-	crm:P82a_begin_of_the_begin "1999-01-01"^^xsd:date ;
-	crm:P82b_end_of_the_end "1999-12-31"^^xsd:date
+    rdfs:label "1999" ;
+    crm:P82a_begin_of_the_begin "1999-01-01"^^xsd:date ;
+    crm:P82b_end_of_the_end "1999-12-31"^^xsd:date
 ]
 ```
 
@@ -23,20 +23,20 @@ A `E52 Time-Span` is used for both defining a point in time like a specific date
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body ;
-	crm:P95i_was_formed_by [ a crm:E66_Formation ;
-		crm:P4_has_time-span [ a crm:E52_Time-Span ;
-			rdfs:label "1961" ;
-			crm:P82a_begin_of_the_begin "1961-01-01"^^xsd:date ;
-			crm:P82b_end_of_the_end "1961-12-31"^^xsd:date
-		]
-	] ;
-	crm:P99i_was_dissolved_by [ a crm:E68_Dissolution ;
-		crm:P4_has_time-span [ a crm:E52_Time-Span ;
-			rdfs:label "1989" ;
-			crm:P82a_begin_of_the_begin "1989-01-01"^^xsd:date ;
-			crm:P82b_end_of_the_end "1989-12-31"^^xsd:date
-		]
-	] .
+    crm:P95i_was_formed_by [ a crm:E66_Formation ;
+        crm:P4_has_time-span [ a crm:E52_Time-Span ;
+            rdfs:label "1961" ;
+            crm:P82a_begin_of_the_begin "1961-01-01"^^xsd:date ;
+            crm:P82b_end_of_the_end "1961-12-31"^^xsd:date
+        ]
+    ] ;
+    crm:P99i_was_dissolved_by [ a crm:E68_Dissolution ;
+        crm:P4_has_time-span [ a crm:E52_Time-Span ;
+            rdfs:label "1989" ;
+            crm:P82a_begin_of_the_begin "1989-01-01"^^xsd:date ;
+            crm:P82b_end_of_the_end "1989-12-31"^^xsd:date
+        ]
+    ] .
 ```
 
 <!-- TODO: Model a person with a year/day of birth. Needs a birth event! -->

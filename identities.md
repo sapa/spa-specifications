@@ -15,7 +15,7 @@ Standard classes as defined by CIDOC-CRM, FRBRoo and RiC (respectively its alter
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body, prov:Agent ;
-	crm:P2_has_type spav:abcde .
+    crm:P2_has_type spav:abcde .
 ```
 
 ### Identifiers <a id="identifiers"></a>
@@ -44,11 +44,11 @@ Inventory numbers are stored according to CIDOC-CRM and RiC/PREMIS.
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/o/UUID2> a crm:E24_Physical_Man-Made_Thing, prov:Entity ;
-	crm:P1_is_identified_by [ a crm:E42_Identifier ;
-		rdf:value "E-123456" ;
-		crm:P2_has_type spav:wayst .
-	] ;
-	premis:hasIdentifier "E-123456" .
+    crm:P1_is_identified_by [ a crm:E42_Identifier ;
+        rdf:value "E-123456" ;
+        crm:P2_has_type spav:wayst .
+    ] ;
+    premis:hasIdentifier "E-123456" .
 ```
 
 * `spav:wayst` = "signature"
@@ -59,8 +59,8 @@ Links to other databases such as Wikidata are considered to be objective and sta
 
 ```ttl
 <http://data.performing-arts.ch/a/UUID3> owl:sameAs <http://www.wikidata.org/entity/Q807427>, 
-	<https://d-nb.info/gnd/1102238422>, 
-	<http://tls.theaterwissenschaft.ch/wiki/Barbara_Frey> .
+    <https://d-nb.info/gnd/1102238422>, 
+    <http://tls.theaterwissenschaft.ch/wiki/Barbara_Frey> .
 ```
 
 <!-- TODO: This does not allow to look for external identifiers based on categories easily. Provide SPARQL code to show all Wikidata-Entries? Or use `42 Identifier` with type Wikidata? -->
@@ -76,18 +76,18 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to d
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/UUID4> rdfs:label "Konzert Theater Bern" ;
-	crm:P1_is_identified_by [ a crm:E41_Appellation ;
-		rdf:value "Konzert Theater Bern" ;
-		crm:P2_has_type spav:yanuj ;
-		crm:P139_has_alternative_form [ a crm:E41_Appellation ;
-			rdf:value "KTB" ;
-			crm:P2_has_type spav:yamqk
-		]
-	] ;
-	crm:P67_is_referred_to_by [ a crm:E33_Linguistic_Object ;
-		rdf:value "Beschreibung des Theaters" ;
-		crm:P2_has_type spav:eoept
-	] .
+    crm:P1_is_identified_by [ a crm:E41_Appellation ;
+        rdf:value "Konzert Theater Bern" ;
+        crm:P2_has_type spav:yanuj ;
+        crm:P139_has_alternative_form [ a crm:E41_Appellation ;
+            rdf:value "KTB" ;
+            crm:P2_has_type spav:yamqk
+        ]
+    ] ;
+    crm:P67_is_referred_to_by [ a crm:E33_Linguistic_Object ;
+        rdf:value "Beschreibung des Theaters" ;
+        crm:P2_has_type spav:eoept
+    ] .
 ```
 
 * `spav:yanuj` = "official name"
@@ -103,17 +103,17 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/UUID5> a crm:E21_Person, prov:Agent ;
-	rdfs:label "Fyodor Mikhaylovich Dostoyevsky"@en ;
-	rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
-	rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
-	rdfs:label "Fëdor Michajlovič Dostoevskij"@it ;
-	crm:P1_is_identified_by [ 
-		a crm:E41_Appellation ;
-		rdf:value "Fyodor Mikhaylovich Dostoyevsky"@en ;
-		rdf:value "Fjodor Michailowitsch Dostojewski"@de ;
-		rdf:value "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
-		rdf:value "Fëdor Michajlovič Dostoevskij"@it
-	] .
+    rdfs:label "Fyodor Mikhaylovich Dostoyevsky"@en ;
+    rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
+    rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
+    rdfs:label "Fëdor Michajlovič Dostoevskij"@it ;
+    crm:P1_is_identified_by [ 
+        a crm:E41_Appellation ;
+        rdf:value "Fyodor Mikhaylovich Dostoyevsky"@en ;
+        rdf:value "Fjodor Michailowitsch Dostojewski"@de ;
+        rdf:value "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
+        rdf:value "Fëdor Michajlovič Dostoevskij"@it
+    ] .
 ```
 
 <!-- TODO: Other examples, e.g. for work titles? -->

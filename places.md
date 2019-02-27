@@ -17,20 +17,20 @@ A legal body in the city of Bern:
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body ;
-	crm:P74_has_current _or_former_residence [ a crm:E53_Place ;
-		crm:P89_falls_within <http://data.performing-arts.ch/p/UUID2> ;
-		crm:P87_is_identified_by [ a crm:E45_Address ;
-			rdf:value "Some Street, 3001 Bern"
-		]
-	]
+    crm:P74_has_current _or_former_residence [ a crm:E53_Place ;
+        crm:P89_falls_within <http://data.performing-arts.ch/p/UUID2> ;
+        crm:P87_is_identified_by [ a crm:E45_Address ;
+            rdf:value "Some Street, 3001 Bern"
+        ]
+    ]
 
 <http://data.performing-arts.ch/p/UUID2> a crm:E53_Place ;
-	rdfs:label "Bern"@de, "Berne"@fr, "Berna"@it, "Bern"@en ;
-	crm:P87_is_identified_by <http://data.performing-arts.ch/p/UUID2/a> ;
-	owl:sameAs <http://www.wikidata.org/entity/Q70>, <http://d-nb.info/gnd/4005762-8>, <http://geonames.org/2661552/>, <http://classifications.data.admin.ch/municipality/351> .
+    rdfs:label "Bern"@de, "Berne"@fr, "Berna"@it, "Bern"@en ;
+    crm:P87_is_identified_by <http://data.performing-arts.ch/p/UUID2/a> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q70>, <http://d-nb.info/gnd/4005762-8>, <http://geonames.org/2661552/>, <http://classifications.data.admin.ch/municipality/351> .
 
 <http://data.performing-arts.ch/p/UUID2/a> a crm:E48_Place_Name ;
-	rdf:value "Bern"@de, "Berne"@fr, "Berna"@it, "Bern"@en .
+    rdf:value "Bern"@de, "Berne"@fr, "Berna"@it, "Bern"@en .
 ```
 
 Names of places are given in four languages as `crm:E48_Place_Name` and are repeated as `rdfs:label` for easier usage. The URI of the `crm:E48_Place_Name` is the same as that of the `crm:E53_Place` with an additional `/a`. Therefore, each place may only have a single name in each language. For the sake of brevity this notation is abridged in the following examples.
@@ -43,7 +43,7 @@ Relations between places:
 <http://data.performing-arts.ch/p/UUID3> a crm:E53_Place ;
     rdfs:label "Altstetten" ;
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
-            rdf:value "Altstetten"
+        rdf:value "Altstetten"
     ] ;
     owl:sameAs <http://geonames.org/6295513/>,
         <http://www.wikidata.org/entity/Q445711> ;
@@ -52,7 +52,7 @@ Relations between places:
 <http://data.performing-arts.ch/p/UUID4> a crm:E53_Place ;
     rdfs:label "Zürich" ;
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
-            rdf:value "Zürich"
+        rdf:value "Zürich"
     ] ;
     owl:sameAs <http://geonames.org/6295513/>,
         <http://www.wikidata.org/entity/Q72>,
@@ -64,7 +64,7 @@ Relations between places:
 <http://data.performing-arts.ch/p/UUID5> a crm:E53_Place ;
     rdfs:label "Kanton Zürich" ;
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
-            rdf:value "Kanton Zürich"
+        rdf:value "Kanton Zürich"
     ] ;
     owl:sameAs <http://geonames.org/2657895/>,
         <http://www.wikidata.org/entity/Q11943>,
@@ -76,7 +76,7 @@ Relations between places:
 <http://data.performing-arts.ch/p/UUID6> a crm:E53_Place ;
     rdfs:label "Schweiz" ;
     crm:P87_is_identified_by [ a crm:E48_Place_Name ;
-            rdf:value "Schweiz"
+        rdf:value "Schweiz"
     ] ;
     owl:sameAs <http://geonames.org/2658434/>,
         <http://www.wikidata.org/entity/Q39>,

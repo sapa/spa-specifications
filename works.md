@@ -254,11 +254,11 @@ While each `F22 Self-Contained Expression` according to FRBRoo comes with a `F1 
 
 <http://data.performing-arts.ch/w/UUID1/p/UUID2> a frbr:F31_Performance  ;
     crm:P4_has_time-span [ a crm:E52_Time-Span ;
-		rdfs:label "5.4.2017" .
-	] .
+        rdfs:label "5.4.2017" .
+    ] .
 
 <http://data.performing-arts.ch/w/UUID3> a frbr:F29_Recording_Event  ;
-	 frbr:R20_recorded <http://data.performing-arts.ch/w/UUID1/p/UUID2> ;
+    frbr:R20_recorded <http://data.performing-arts.ch/w/UUID1/p/UUID2> ;
 	crm:P9_consists_of <http://data.performing-arts.ch/w/UUID4> .
 
 <http://data.performing-arts.ch/w/UUID4> a crm:E7_Activity ;
