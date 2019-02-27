@@ -19,6 +19,7 @@ The documentation is structured along the following basic concepts:
 
 * [Actors/Agents](actors) (individual persons, groups, institutions)
 * [Works](works) (performing arts works and their originals such as written plays or musical compositions)
+* [Seasons](seasons)
 * Objects (incl. [Venues](venues))
 * [Places](places)
 * Records

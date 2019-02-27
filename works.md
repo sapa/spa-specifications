@@ -39,10 +39,13 @@ In the case of a re-staging the plan refers to the work instance of the original
 			crm:P82a_begin_of_the_begin "2017-04-05"^^xsd:date ;
 			crm:P82b_end_of_the_end "2017-04-05"^^xsd:date .
 		] .
-```
 
-* `spav:mnawx`= "performance art"
-* `spav:hlosp`= "German language premiere"
+spav:mnawx a crm:E55_Type, skos:Concept ;
+        skos:prefLabel "performance art"@en .
+
+spav:hlosp a crm:E55_Type, skos:Concept ;
+        skos:prefLabel "German language premiere"@en .
+```
 
 <!-- TODO: crm:P9_consists_of or frbr:has_part ?-->
 
@@ -56,7 +59,7 @@ FRBRoo and CIDOC-CRM provide two ways to connect the individual performance work
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/w/UUID1> a frbr:F25_Performance_Plan ;
-    rdfs:label "Die Grönholm-Methode" ;
+    rdfs:label "Die Grönholm-Methode" .
 
 <http://data.performing-arts.ch/w/UUID1/w> a frbr:F20_Performance_Work ;
 	rdfs:label "Die Grönholm-Methode" ;
@@ -73,10 +76,10 @@ FRBRoo and CIDOC-CRM provide two ways to connect the individual performance work
     	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> . ] .
 
 <http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body  ;
-	rdfs:label "Theater Matte" ;
+	rdfs:label "Theater Matte" .
 
 <http://data.performing-arts.ch/a/UUID6> a crm:E21_Person  ;
-	rdfs:label "Oliver Stein" ;
+	rdfs:label "Oliver Stein" .
 
 <http://data.performing-arts.ch/w/UUID1/p> a frbr:F31_Performance  ;
     frbr:R25_performed <http://data.performing-arts.ch/w/UUID1> ;
@@ -85,41 +88,49 @@ FRBRoo and CIDOC-CRM provide two ways to connect the individual performance work
     	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID7> . ]
 
 <http://data.performing-arts.ch/a/UUID7> a crm:E21_Person  ;
-	rdfs:label "Markus Maria Enggist" ;
+	rdfs:label "Markus Maria Enggist" .
 
+spav:muwgo a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "production"@en .
+
+spav:mutnt a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "stage direction"@en .
+
+spav:munib a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "acting"@en .
 ```
 
 <!-- TODO: role and order -->
-
-* `spav:muwgo`= "production"
-* `spav:mutnt`= "stage direction"
-* `spav:munib`= "acting"
-
 
 The usage of activities is necessary to provide certain information but as this information might not be relevant in all cases the direct connection between `F20 Performance Work` and `F25 Performance Plan` is also used. The same applies to sources (such as literary works) and documentations (such as video recordings) as they are also rendered as FRBRoo individuals.
 
 All contributions to performing arts productions are rendered as instances of `E7 Activity` and classified with the [SPA vocabulary](https://sapa.github.io/spa-vocabulary/). Alternative designations for an activity are preserved with an optional `rdfs:label`.
 
+```ttl
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix frbr: <http://www.cidoc-crm.org/frbr/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/x/UUID1> a frbr:F28_Expression_Creation ;
+        crm:P9_consists_of [ a crm:E7_Activity ;
+	        crm:P2_has_type spav:mutnt ;
+    	    rdfs:label "installation" ;
+        	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID2> .
+        ] .
+
+<http://data.performing-arts.ch/a/UUID2> a crm:E21_Person ;
+	rdfs:label "William Forsythe" .
+
+spav:mutnt a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "stage design"@en .
+```
+
+In the above example, William Forsythe has a credit for "installation" which is preserved additionally to the classification of his contribution as stage design.
+
 
 ### Additional Information <a id="additional-information"></a>
 
 <!-- TODO: acts and scenes  act_count, scene_count / spa:number_of_acts, spa_number_of_scenes xsd:int -->
-
-The spoken language and possible subtitles are defined as properties of the `frbr:F20_Performance_Work`.
-
-```ttl
-@prefix frbr: <http://www.cidoc-crm.org/frbr/> .
-@prefix schema: <http://schema.org/> .
-@prefix spav: <http://vocab.performing-arts.ch/> .
-
-<http://data.performing-arts.ch/w/UUID1/w> a frbr:F20_Performance_Work ;
-	schema:inLanguage spav:lgita ;
-    schema:subtitleLanguage spav:lgdeu .
-```
-
-* `spav:lgita`= "Italian"
-* `spav:lgdeu`= "German"
-
 
 The [venue](venues) is linked with the default performance.
 
@@ -133,11 +144,29 @@ The [venue](venues) is linked with the default performance.
 
 <http://data.performing-arts.ch/t/UUID2> a crm:E22_Man-Made_Object ;
     rdfs:label "Theater Matte" ;
-    crm:P2_has_type spav:dwmkn ;
+    crm:P2_has_type spav:dwmkn .
 
+spav:dwmkn a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "venue"@en .
 ```
 
-* `spav:dwmkn`= "venue"
+The spoken language and possible subtitles are defined as properties of the `frbr:F20_Performance_Work`.
+
+```ttl
+@prefix frbr: <http://www.cidoc-crm.org/frbr/> .
+@prefix schema: <http://schema.org/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/w/UUID1/w> a frbr:F20_Performance_Work ;
+	schema:inLanguage spav:lgita ;
+    schema:subtitleLanguage spav:lgdeu .
+
+spav:lgita a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "Italian"@en .
+
+spav:lgdeu a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "German"@en .
+```
 
 
 ### Sources <a id="sources"></a>
@@ -193,11 +222,16 @@ FRBRoo is also used to describe the literary reference of a production.
 
 <http://data.performing-arts.ch/a/UUID10> a crm:E21_Person  ;
 	rdfs:label "Jordi Galceran" .
-```
 
-* `spav:mudcw`= "adaption"
-* `spav:muwyo`= "translation"
-* `spav:muiuk`= "authorship"
+spav:mudcw a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "adaption"@en .
+
+spav:muwyo a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "translation"@en .
+
+spav:muiuk a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "authorship"@en .
+```
 
 While each `F22 Self-Contained Expression` according to FRBRoo comes with a `F1 Work`, the rendering of the letter is omitted for the sake of reducing complexity.
 
@@ -220,8 +254,8 @@ While each `F22 Self-Contained Expression` according to FRBRoo comes with a `F1 
 
 <http://data.performing-arts.ch/w/UUID1/p/UUID2> a frbr:F31_Performance  ;
     crm:P4_has_time-span [ a crm:E52_Time-Span ;
-			rdfs:label "5.4.2017" .
-		] .
+		rdfs:label "5.4.2017" .
+	] .
 
 <http://data.performing-arts.ch/w/UUID3> a frbr:F29_Recording_Event  ;
 	 frbr:R20_recorded <http://data.performing-arts.ch/w/UUID1/p/UUID2> ;
@@ -236,37 +270,9 @@ While each `F22 Self-Contained Expression` according to FRBRoo comes with a `F1 
 	rdfs:label "NN" .
 
 <http://data.performing-arts.ch/w/UUID6> a frbr:F21_Recording_Work  .
-<!-- TODO: add identifier -->
 
+spav:mujig a crm:E55_Type, skos:Concept ;
+    skos:prefLabel "camera operation"@en .
 ```
 
-* `spav:mujig`= "camera operation"
-
-
-### Season
-
-Performing arts production are usually organized in annual seasons lasting from one summer until the next. The attribution of an individual production to a general season happens by defining the production's `F28 Expression Creation ` as part of a `E4 Period` that is the respective season. This season is the same for all producers and all productions.
-
-```ttl
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix frbr: <http://www.cidoc-crm.org/frbr/> .
-@prefix spav: <http://vocab.performing-arts.ch/> .
-
-<http://data.performing-arts.ch/w/UUID1> a frbr:F25_Performance_Plan ;
-    rdfs:label "Die Grönholm-Methode" .
-
-<http://data.performing-arts.ch/x/UUID3> a frbr:F28_Expression_Creation  ;
-	frbr:R17_created <http://data.performing-arts.ch/w/UUID2> .
-
-<http://data.performing-arts.ch/x/UUID4> a crm:E4_Period ;
-	rdfs:label "Season 2016/17" ;
-    crm:P4_has_time-span [ a crm:E52_Time-Span ;
-			rdfs:label "1.8.2016 - 31.7.2017" ;
-			crm:P82a_begin_of_the_begin "2016-08-01"^^xsd:date ;
-			crm:P82b_end_of_the_end "2017-07-31"^^xsd:date .
-		] ;
-	crm:P9_consists_of <http://data.performing-arts.ch/x/UUID3> .
-```
-
-<!-- TODO: Do we need a specific type? How does it relate to wd:Q40008090? -->
-
+<!-- TODO: add identifier to recording work -->
