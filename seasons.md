@@ -16,7 +16,7 @@ Performing arts productions are usually organized in annual seasons lasting from
 
 <http://data.performing-arts.ch/x/UUID2> a frbr:F28_Expression_Creation  ;
 	frbr:R17_created <http://data.performing-arts.ch/w/UUID1> ;
-	crm:P10_falls_with <http://data.performing-arts.ch/e/UUID3> ,
+	crm:P10_falls_within <http://data.performing-arts.ch/e/UUID3> ,
 		<http://data.performing-arts.ch/e/UUID4> .
 
 <http://data.performing-arts.ch/e/UUID3> a crm:E4_Period ;
