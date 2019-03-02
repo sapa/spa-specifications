@@ -9,7 +9,6 @@ Performing arts productions are usually organized in annual seasons lasting from
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix frbr: <http://www.cidoc-crm.org/frbr/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
-@prefix wd: <http://www.wikidata.org/entity/> .
 
 <http://data.performing-arts.ch/w/UUID1> a frbr:F25_Performance_Plan ;
     rdfs:label "Hello, Mister MacGuffin!" .

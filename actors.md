@@ -66,11 +66,11 @@ The following examples are not complete as documentation of the implementations 
         crm:P145_separated <http://data.performing-arts.ch/a/UUID8> ;
         crm:P4_has_time-span [ a crm:E52_Time-Span ]
     ]
-    crm_P76_has_contact_point [ a crm:E45_Address ;
+    crm:P76_has_contact_point [ a crm:E45_Address ;
         rdf:value "Street, Place, Country" ;
         crm_P2_has_type spav:ihtxc
     ] ;
-    crm_P76_has_contact_point [ a crm:E51_Contact_Point ;
+    crm:P76_has_contact_point [ a crm:E51_Contact_Point ;
         rdf:value <http://www.theatre-abc.ch> ;
         crm_P2_has_type spav:ihctx
     ] ;
