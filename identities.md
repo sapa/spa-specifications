@@ -29,8 +29,6 @@ The primary identifier is the URI of a resource. URIs are structured according t
 * Records: `http://data.performing-arts.ch/r/<UUID>`
 * Seasons: `http://data.performing-arts.ch/s/<YEAR1>-<YEAR2>`
 
-<!-- TODO: Do I have to distinguish here between works and performances? -->
-
 Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of a special category: `http://data.performing-arts.ch/x/<UUID>`.
 
 Entities that are considered to be not yet identified also have a separate name space: `http://data.performing-arts.ch/u/<UUID>`.
@@ -67,7 +65,7 @@ Links to other databases such as Wikidata are considered to be objective and sta
 
 ### Appellations <a id="appellations"></a>
 
-The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to document appellations. Here subclasses are only used if they express a specific form of appellation in respect to the type of entity that is described (`E35 Title`, `E48 Place Name`). However, in all cases the structure is the same and as appellations are never used for more than one entity, they are modeled as blank nodes.
+The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in respect to the type of entity that is described (`E82 Actor Appellation`, `E35 Title`, `E48 Place Name`). In all cases the structure is the same and as appellations are never used for more than one entity, they are modeled as blank nodes.
 
 `rdfs:label` is additionally used for the most common appellation in order to facilitate database requests that are not primarily interested in appellations.
 
@@ -76,10 +74,10 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to d
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/UUID4> rdfs:label "Konzert Theater Bern" ;
-    crm:P1_is_identified_by [ a crm:E41_Appellation ;
+    crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ;
         rdf:value "Konzert Theater Bern" ;
         crm:P2_has_type spav:yanuj ;
-        crm:P139_has_alternative_form [ a crm:E41_Appellation ;
+        crm:P139_has_alternative_form [ a crm:E82_Actor_Appellation ;
             rdf:value "KTB" ;
             crm:P2_has_type spav:yamqk
         ]
@@ -94,6 +92,7 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses to d
 * `spav:yamqk` = "acronym"
 * `spav:eoept` = "description"
 
+<!-- TODO: define prefered appellation -->
 
 Any literal value such as `rdfs:label` or `rdf:value` may be used with language tags.
 
@@ -108,7 +107,7 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
     rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
     rdfs:label "Fëdor Michajlovič Dostoevskij"@it ;
     crm:P1_is_identified_by [ 
-        a crm:E41_Appellation ;
+        a crm:E82_Actor_Appellation ;
         rdf:value "Fyodor Mikhaylovich Dostoyevsky"@en ;
         rdf:value "Fjodor Michailowitsch Dostojewski"@de ;
         rdf:value "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
