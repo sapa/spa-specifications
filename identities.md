@@ -74,7 +74,7 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in r
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/UUID4> rdfs:label "Konzert Theater Bern" ;
-    crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ;
+    crm:P131_is_identified_by [ a crm:E82_Actor_Appellation ;
         rdf:value "Konzert Theater Bern" ;
         crm:P2_has_type spav:yanuj ;
         crm:P139_has_alternative_form [ a crm:E82_Actor_Appellation ;
@@ -106,7 +106,7 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
     rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
     rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
     rdfs:label "Fëdor Michajlovič Dostoevskij"@it ;
-    crm:P1_is_identified_by [ 
+    crm:P131_is_identified_by [ 
         a crm:E82_Actor_Appellation ;
         rdf:value "Fyodor Mikhaylovich Dostoyevsky"@en ;
         rdf:value "Fjodor Michailowitsch Dostojewski"@de ;
