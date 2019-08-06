@@ -65,24 +65,29 @@ Links to other databases such as Wikidata are considered to be objective and sta
 
 ### Appellations <a id="appellations"></a>
 
-The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in respect to the type of entity that is described (`E82 Actor Appellation`, `E35 Title`, `E48 Place Name`). In all cases the structure is the same and as appellations are never used for more than one entity, they are modeled as blank nodes.
+The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in respect to the type of entity that is described (`E82 Actor Appellation`, `E35 Title`, `E48 Place Name`). In all cases the usage is the same and as appellations are never used for more than one entity, they are modeled as blank nodes.
 
 `rdfs:label` is additionally used for the most common appellation in order to facilitate database requests that are not primarily interested in appellations.
+
+#### Groups
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/UUID4> rdfs:label "Konzert Theater Bern" ;
-    crm:P131_is_identified_by [ a crm:E82_Actor_Appellation ;
+    crm:P131_is_identified_by [
+    	a crm:E82_Actor_Appellation ;
         rdf:value "Konzert Theater Bern" ;
-        crm:P2_has_type spav:yanuj ;
-        crm:P139_has_alternative_form [ a crm:E82_Actor_Appellation ;
-            rdf:value "KTB" ;
-            crm:P2_has_type spav:yamqk
-        ]
+        crm:P2_has_type spav:yanuj
     ] ;
-    crm:P67_is_referred_to_by [ a crm:E33_Linguistic_Object ;
+    crm:P131_is_identified_by [
+    	a crm:E82_Actor_Appellation ;
+        rdf:value "KTB" ;
+        crm:P2_has_type spav:yamqk
+    ] ;
+    crm:P67_is_referred_to_by [
+    	a crm:E33_Linguistic_Object ;
         rdf:value "Beschreibung des Theaters" ;
         crm:P2_has_type spav:eoept
     ] .
@@ -92,7 +97,29 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in r
 * `spav:yamqk` = "acronym"
 * `spav:eoept` = "description"
 
-<!-- TODO: define prefered appellation -->
+#### Persons
+
+```ttl
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/a/UUID5> rdfs:label "Lilli Palmer" ;
+    crm:P131_is_identified_by [
+    	a crm:E82_Actor_Appellation ;
+        rdf:value "Lilli Palmer" ;
+        crm:P2_has_type spav:yatcx ;
+        crm:P2_has_type spav:yaajh
+    ] ;
+    crm:P131_is_identified_by [
+    	a crm:E82_Actor_Appellation ;
+        rdf:value "Lilli Marie Peiser" ;
+        crm:P2_has_type spav:yadpx
+    ] .
+```
+
+* `spav:yatcx` = "common name"
+* `spav:yadpx` = "birth name"
+* `spav:yaajh` = "pseudonym"
 
 Any literal value such as `rdfs:label` or `rdf:value` may be used with language tags.
 
@@ -101,7 +128,7 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID5> a crm:E21_Person, prov:Agent ;
+<http://data.performing-arts.ch/a/UUID6> a crm:E21_Person, prov:Agent ;
     rdfs:label "Fyodor Mikhaylovich Dostoyevsky"@en ;
     rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
     rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;
