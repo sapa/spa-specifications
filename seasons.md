@@ -23,7 +23,8 @@ Performing arts productions are usually organized in annual seasons lasting from
 
 <http://data.performing-arts.ch/e/UUID4> a crm:E7_Activity ;
     rdfs:label "Directorship Barbara Frey, Schauspielhaus Zürich" ;
-    crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P4_has_time-span [
+    	a crm:E52_Time-Span ;
         rdfs:label "1.8.2009 -" ;
         crm:P82a_begin_of_the_begin "2009-08-01"^^xsd:date .
     ] ;

@@ -22,7 +22,7 @@ The documentation is structured along the following basic concepts:
 * [Seasons](seasons)
 * Objects (incl. [Venues](venues))
 * [Places](places)
-* Records
+* [Records](records)
 
 ###  General Concepts <a id="general-concepts"></a>
 
