@@ -25,6 +25,7 @@ The primary identifier is the URI of a resource. URIs are structured according t
 * Actors: `http://data.performing-arts.ch/a/<UUID>`
 * Works: `http://data.performing-arts.ch/w/<UUID>`
 * Objects: `http://data.performing-arts.ch/o/<UUID>`
+* Concepts: `http://data.performing-arts.ch/c/<UUID>`
 * Places: `http://data.performing-arts.ch/p/<UUID>`
 * Records: `http://data.performing-arts.ch/r/<UUID>`
 * Seasons: `http://data.performing-arts.ch/s/<YEAR1>-<YEAR2>`
