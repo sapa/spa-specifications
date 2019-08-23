@@ -29,6 +29,8 @@ The primary identifier is the URI of a resource. URIs are structured according t
 * Records: `http://data.performing-arts.ch/r/<UUID>`
 * Seasons: `http://data.performing-arts.ch/s/<YEAR1>-<YEAR2>`
 
+Some features of actors such as gender or nationality are rendered by CIDOC-CRM als group memberships. These groups are identified as `http://data.performing-arts.ch/g/<TYPE>/<VALUE>`, where `<TYPE>` stands for groups types (`gender`, `nation`) and `<VALUE>` for the respective group identities (`f`, `m`, `d` or `ch`, `fr`, ect.).
+
 Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of a special category: `http://data.performing-arts.ch/x/<UUID>`.
 
 Entities that are considered to be not yet identified also have a separate name space: `http://data.performing-arts.ch/u/<UUID>`.

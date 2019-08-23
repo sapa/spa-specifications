@@ -29,15 +29,18 @@ The following examples are not complete as documentation of the implementations 
     crm:P74_has_current_ or_former_residence [ a crm:Place ;
         crm:P89_falls_within <http://data.performing-arts.ch/p/UUID9>
     ] ;
-    owl:sameAs <http://www.wikidata.org/entity/Q123>, 
-    <https://d-nb.info/gnd/123456789>, 
+    crm:P107i_is_current_or_former_member_of <http://data.performing-arts.ch/g/gender/x> ,
+    	<http://data.performing-arts.ch/g/nation/iso> ,
+    	<http://data.performing-arts.ch/a/UUID5>.
+    owl:sameAs <http://www.wikidata.org/entity/Q123> , 
+    <https://d-nb.info/gnd/123456789> , 
     <http://tls.theaterwissenschaft.ch/wiki/Firstname_Lastname> ;
     rdau:P60806 <http://data.performing-arts.ch/r/UUID4> .
 ```
 
 * `rdau:P60806` = "is subject of" (a record set)
 
-<!-- TODO: nationality, memberships, comment, gender as ore:isAggregatedBy -->
+Gender and nationality of a person are expressed as memberships in corresponding groups just as regular group memberships.
 
 ### Groups and Legal Bodies <a id="groups"></a>
 
@@ -48,7 +51,7 @@ The following examples are not complete as documentation of the implementations 
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body ;
-    crm:P2_has_type spav:GROUPTYPE-PRODUCER ;
+    crm:P2_has_type spav:vrivu ;
     rdfs:label "Theatre ABC" ;
     crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ] ;
     crm:P95i_was_formed_by [ a crm:E66_Formation ] ;
@@ -56,14 +59,6 @@ The following examples are not complete as documentation of the implementations 
     rdau:P60683 <http://data.performing-arts.ch/a/UUID6> ;
     rdaa:P50016 <http://data.performing-arts.ch/a/UUID7> ;
     crm:P107_has_current_or_former_member <http://data.performing-arts.ch/a/UUID8> ;
-    crm:P144i_gained_member_by [ a crm:E85_Joining ; 
-        crm:P143_joined <http://data.performing-arts.ch/a/UUID8> ;
-        crm:P4_has_time-span [ a crm:E52_Time-Span ]
-    ]
-    crm:P146_lost_member_by [ a crm:E86_Leaving ; 
-        crm:P145_separated <http://data.performing-arts.ch/a/UUID8> ;
-        crm:P4_has_time-span [ a crm:E52_Time-Span ]
-    ]
     crm:P76_has_contact_point [ a crm:E45_Address ;
         rdf:value "Street, Place, Country" ;
         crm_P2_has_type spav:ihtxc
@@ -92,12 +87,12 @@ The following examples are not complete as documentation of the implementations 
 
 * `rdaa:P50016` = "has successor"
 * `rdau:P60683` = "has predecessor"
+* `spav:vrivu`= "artistic professional producer with own venue"
 * `spav:mneyg`= "spoken theatre"
 * `spav:ihtxc`= "address"
 * `spav:ihctx`= "website"
 * `spav:mujfv`= "management"
 
-<!-- TODO: Do we need temporal information for memberships? Right now we have two ways to express memberships. -->
 <!-- TODO: How to express a genre focus? Is crm:P14i_performed [ a crm:E7_Activity ; crm:P2_has_type spav:mneyg ] the best way? -->
 <!-- TODO: How to represent that one actor/agent controls another? -->
 <!-- TODO: Change the two identical blank node addresses into into one entity with URI? -->
