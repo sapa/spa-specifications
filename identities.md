@@ -11,10 +11,9 @@ Standard classes as defined by CIDOC-CRM, FRBRoo and RiC (respectively its alter
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body, prov:Agent ;
+<http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body ;
     crm:P2_has_type spav:abcde .
 ```
 
@@ -126,10 +125,9 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID6> a crm:E21_Person, prov:Agent ;
+<http://data.performing-arts.ch/a/UUID6> a crm:E21_Person ;
     rdfs:label "Fyodor Mikhaylovich Dostoyevsky"@en ;
     rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
     rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;

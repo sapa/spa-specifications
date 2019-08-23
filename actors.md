@@ -11,11 +11,10 @@ The following examples are not complete as documentation of the implementations 
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID1> a crm:E21_Person, prov:Agent ;
+<http://data.performing-arts.ch/a/UUID1> a crm:E21_Person ;
     rdfs:label "Firstname Lastname" ;
     rdfs:comment "profession" ;
     crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ] ;
@@ -44,12 +43,11 @@ The following examples are not complete as documentation of the implementations 
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdaa: <http://rdaregistry.info/Elements/a/> .
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body, prov:Agent ;
+<http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body ;
     crm:P2_has_type spav:GROUPTYPE-PRODUCER ;
     rdfs:label "Theatre ABC" ;
     crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ] ;

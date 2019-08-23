@@ -10,8 +10,9 @@ Venues can contain each other in that sense that a building can contain one or m
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix frbr: <http://www.cidoc-crm.org/frbr/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
+
+<!-- TODO: What kind of appellation is correct here? -->
 
 <http://data.performing-arts.ch/o/UUID1> a crm:E22_Man-Made_Object ;
     rdfs:label "Kaserne Basel" ;
@@ -29,7 +30,7 @@ Venues can contain each other in that sense that a building can contain one or m
     	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID4>
     ] .
     
-<http://data.performing-arts.ch/a/UUID4> a crm:E40_Legal_Body, prov:Agent ;
+<http://data.performing-arts.ch/a/UUID4> a crm:E40_Legal_Body ;
     rdfs:label "Kaserne Basel" .
 
 <http://data.performing-arts.ch/o/UUID3> a crm:E22_Man-Made_Object ;
