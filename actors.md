@@ -29,10 +29,10 @@ The following examples are not complete as documentation of the implementations 
     crm:P74_has_current_ or_former_residence [ a crm:Place ;
         crm:P89_falls_within <http://data.performing-arts.ch/p/UUID9>
     ] ;
-    crm:P107i_is_current_or_former_member_of <http://data.performing-arts.ch/g/gender/x> ,
-    	<http://data.performing-arts.ch/g/nation/iso> ,
+    crm:P107i_is_current_or_former_member_of <http://data.performing-arts.ch/g/gender/X> ,
+    	<http://data.performing-arts.ch/g/nation/ch> ,
     	<http://data.performing-arts.ch/a/UUID5>.
-    owl:sameAs <http://www.wikidata.org/entity/Q123> , 
+    owl:sameAs <http://www.wikidata.org/entity/Q123> ,
     <https://d-nb.info/gnd/123456789> , 
     <http://tls.theaterwissenschaft.ch/wiki/Firstname_Lastname> ;
     rdau:P60806 <http://data.performing-arts.ch/r/UUID4> .

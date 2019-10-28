@@ -29,7 +29,7 @@ The primary identifier is the URI of a resource. URIs are structured according t
 * Records: `http://data.performing-arts.ch/r/<UUID>`
 * Seasons: `http://data.performing-arts.ch/s/<YEAR1>-<YEAR2>`
 
-Some features of actors such as gender or nationality are rendered by CIDOC-CRM als group memberships. These groups are identified as `http://data.performing-arts.ch/g/<TYPE>/<VALUE>`, where `<TYPE>` stands for groups types (`gender`, `nation`) and `<VALUE>` for the respective group identities (`f`, `m`, `d` or `ch`, `fr`, ect.).
+Some properties of actors such as gender or nationality are rendered by CIDOC-CRM als group memberships. These groups are identified as `http://data.performing-arts.ch/g/<TYPE>/<VALUE>`, where `<TYPE>` stands for groups types (`gender`, `nation`) and `<VALUE>` for the respective group identities (`f`, `m`, and `d` for gender and ISO 3166-1 country codes for nationality). For the time being Swiss nationality is the only one that is mapped in order to avoid the complexity of historicizing nationalities and because this is satisfactory in regard to our collection policy.
 
 Entities that are only used once in regard to other instances (such as appellations or descriptions) are conceptually seen as blank nodes and in this specification are described as such. However, for technical reasons they are effectively rendered as URIs of a special category: `http://data.performing-arts.ch/x/<UUID>`.
 
