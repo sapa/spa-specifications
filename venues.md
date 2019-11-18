@@ -12,12 +12,13 @@ Venues can contain each other in that sense that a building can contain one or m
 @prefix frbr: <http://www.cidoc-crm.org/frbr/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<!-- TODO: What kind of appellation is correct here? -->
-
 <http://data.performing-arts.ch/o/UUID1> a crm:E22_Man-Made_Object ;
     rdfs:label "Kaserne Basel" ;
     crm:P2_has_type spav:dwmkn ;
-    crm:P1_is_identified_by [ crm:E41_Appellation ] ;
+    crm:P102_has_title [ 
+    	a crm:E35_Title ;
+    	rdf:value "Kaserne Basel" .
+    ] ;
     crm:P156_occupies [ a crm:P53_Place ;
         crm:P168_place_is_defined_by [ a crm:E94_Space_Primitive ] ;
         crm:P87_is_identified_by [ a crm:E45_Address ;
@@ -27,7 +28,12 @@ Venues can contain each other in that sense that a building can contain one or m
     crm:P46_is_composed_of <http://data.performing-arts.ch/o/UUID3> ;
     crmP16i_was_used_for [ a crm:E7_Activity ;
     	crm:P2_has_type spav:mujfv ;
-    	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID4>
+    	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID4> ;
+    	crm:P4_has_time-span [
+    		a crm:E52_Time-Span ;
+    		rdfs:label "1980-" ;
+        	crm:P82a_begin_of_the_begin "1980-01-01"^^xsd:date .
+    	]
     ] .
     
 <http://data.performing-arts.ch/a/UUID4> a crm:E40_Legal_Body ;

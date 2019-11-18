@@ -17,7 +17,7 @@ The following examples are not complete as documentation of the implementations 
 <http://data.performing-arts.ch/a/UUID1> a crm:E21_Person ;
     rdfs:label "Firstname Lastname" ;
     rdfs:comment "profession" ;
-    crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ] ;
+    crm:P131_is_identified_by [ a crm:E82_Actor_Appellation ] ;
     crm:P98i_was_born [ a crm:E67_Birth ;
         crm:P4_has_time-span [ a crm:E52_Time-Span ] ;
         crm:P7_took_place_at <http://data.performing-arts.ch/p/UUID2>
@@ -53,7 +53,7 @@ Gender and nationality of a person are expressed as memberships in corresponding
 <http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body ;
     crm:P2_has_type spav:vrivu ;
     rdfs:label "Theatre ABC" ;
-    crm:P1_is_identified_by [ a crm:E82_Actor_Appellation ] ;
+    crm:P131_is_identified_by [ a crm:E82_Actor_Appellation ] ;
     crm:P95i_was_formed_by [ a crm:E66_Formation ] ;
     crm:P99i_was_dissolved_by [ a crm:E68_Dissolution ] ;
     rdau:P60683 <http://data.performing-arts.ch/a/UUID6> ;
