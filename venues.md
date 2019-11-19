@@ -26,7 +26,7 @@ Venues can contain each other in that sense that a building can contain one or m
         crm:P89_falls_within <http://data.performing-arts.ch/o/UUID2>
     ] ;
     crm:P46_is_composed_of <http://data.performing-arts.ch/o/UUID3> ;
-    crmP16i_was_used_for [ a crm:E7_Activity ;
+    crm:P16i_was_used_for [ a crm:E7_Activity ;
     	crm:P2_has_type spav:mujfv ;
     	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID4> ;
     	crm:P4_has_time-span [
