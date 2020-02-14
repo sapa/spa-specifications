@@ -140,9 +140,9 @@ The [venue](venues) is linked with the default performance.
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
 <http://data.performing-arts.ch/w/UUID1/p> a frbr:F31_Performance  ;
-	crm:P8_took_place_ on_or_within <http://data.performing-arts.ch/t/UUID2>
+	crm:P8_took_place_ on_or_within <http://data.performing-arts.ch/o/UUID2>
 
-<http://data.performing-arts.ch/t/UUID2> a crm:E22_Man-Made_Object ;
+<http://data.performing-arts.ch/o/UUID2> a crm:E22_Man-Made_Object ;
     rdfs:label "Theater Matte" ;
     crm:P2_has_type spav:dwmkn .
 

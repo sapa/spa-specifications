@@ -7,13 +7,14 @@ Before any statements are made about an entity, it should be identified. Such id
 
 ### Types <a id="types"></a>
 
-Standard classes as defined by CIDOC-CRM, FRBRoo and RiC (respectively its alternatives) are used. Own class-like categories from the [Swiss Performing Arts vocabulary](https://sapa.github.io/spa-vocabulary/) are attributed trough `crm:P2_has_type`. On both levels more that one classification can be used.
+Standard classes as defined by CIDOC-CRM, FRBRoo and RiC are used. Own class-like categories from the [Swiss Performing Arts vocabulary](https://sapa.github.io/spa-vocabulary/) are attributed trough `crm:P2_has_type`. On both levels more that one classification can be used.
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body ;
+<http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body, rico:CorporateBody ;
     crm:P2_has_type spav:abcde .
 ```
 
@@ -39,11 +40,11 @@ Inventory numbers are stored according to CIDOC-CRM and RiC/PREMIS.
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 @prefix premis: <http://www.loc.gov/premis/rdf/v1#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/o/UUID2> a crm:E24_Physical_Man-Made_Thing, prov:Entity ;
+<http://data.performing-arts.ch/o/UUID2> a crm:E22_Man-Made_Object, rico:Thing ;
     crm:P1_is_identified_by [ a crm:E42_Identifier ;
         rdf:value "E-123456" ;
         crm:P2_has_type spav:wayst .
@@ -103,9 +104,11 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in r
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID5> rdfs:label "Lilli Palmer" ;
+<http://data.performing-arts.ch/a/UUID5> a crm:E21_Person, rico:Person ;
+	rdfs:label "Lilli Palmer" ;
     crm:P131_is_identified_by [
     	a crm:E82_Actor_Appellation ;
         rdf:value "Lilli Palmer" ;
@@ -127,9 +130,10 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID6> a crm:E21_Person ;
+<http://data.performing-arts.ch/a/UUID6> a crm:E21_Person, rico:Person ;
     rdfs:label "Fyodor Mikhaylovich Dostoyevsky"@en ;
     rdfs:label "Fjodor Michailowitsch Dostojewski"@de ;
     rdfs:label "Fiodor Mikhaïlovitch Dostoïevski"@fr ;

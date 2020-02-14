@@ -6,8 +6,7 @@ relative_permalinks: false
 
 # Setup
 title:               SPA Specifications
-# tagline:             'Specification of linked data structures for the future database of Foundation SAPA.'
-description:         'Specification of linked data structures for the future database of <a href="http://sapa.swiss">Foundation SAPA</a>.'
+description:         'Specification of linked data structures for the future database of <a href="http://sapa.swiss">SAPA Foundation</a>.'
 url:                 https://sapa.github.io/spa-specifications
 
 github:
