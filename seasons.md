@@ -7,14 +7,14 @@ Performing arts productions are usually organized in annual seasons lasting from
 
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix frbr: <http://www.cidoc-crm.org/frbr/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/w/UUID1> a frbr:F25_Performance_Plan ;
+<http://data.performing-arts.ch/w/UUID1> a frbroo:F25_Performance_Plan ;
     rdfs:label "Hello, Mister MacGuffin!" .
 
-<http://data.performing-arts.ch/x/UUID2> a frbr:F28_Expression_Creation  ;
-    frbr:R17_created <http://data.performing-arts.ch/w/UUID1> ;
+<http://data.performing-arts.ch/x/UUID2> a frbroo:F28_Expression_Creation  ;
+    frbroo:R17_created <http://data.performing-arts.ch/w/UUID1> ;
     crm:P10_falls_within <http://data.performing-arts.ch/e/UUID3> ,
         <http://data.performing-arts.ch/e/UUID4> .
 
