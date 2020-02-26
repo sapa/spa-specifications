@@ -69,13 +69,17 @@ Gender and nationality of a person are expressed as memberships in corresponding
         crm:P89_falls_within <http://data.performing-arts.ch/p/UUID9>
     ] ;
     crm:P14i_performed [ a crm:E7_Activity ;
-        crm:P2_has_type spav:mneyg
-    ] ;
-    crm:P14i_performed [ a crm:E7_Activity ;
         crm:P2_has_type spav:mujfv ;
         crm:P16_used_specific_object <http://data.performing-arts.ch/o/UUID10> ;
         crm:P4_has_time-span [ a crm:E52_Time-Span ]
-    ] ;
+    ].
+
+[
+	a frbroo:F51_Pursuit ;
+	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> ;
+	frbroo:R59_had_typical_subject spav:mneyg.
+]
+
 ```
 
 * `spav:vrivu`= "artistic professional producer with own venue"
@@ -84,7 +88,7 @@ Gender and nationality of a person are expressed as memberships in corresponding
 * `spav:ihctx`= "website"
 * `spav:mujfv`= "management"
 
-<!-- TODO: How to express a genre focus? Is crm:P14i_performed [ a crm:E7_Activity ; crm:P2_has_type spav:mneyg ] the best way? -->
-<!-- TODO: How to represent that one actor/agent controls another? -->
+A focus of a group on one or more genres is expressed as a `frbroo:F51_Pursuit`.
+
 <!-- TODO: Change the two identical blank node addresses into into one entity with URI? -->
 
