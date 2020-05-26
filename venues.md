@@ -16,9 +16,8 @@ Venues can contain each other in that sense that a building can contain one or m
 <http://data.performing-arts.ch/o/UUID1> a crm:E22_Man-Made_Object, rico:Thing ;
     rdfs:label "Kaserne Basel" ;
     crm:P2_has_type spav:dwmkn ;
-    crm:P102_has_title [ 
-    	a crm:E35_Title ;
-    	rdf:value "Kaserne Basel" .
+    crm:P102_has_title [ a crm:E35_Title ;
+        rdf:value "Kaserne Basel" .
     ] ;
     crm:P156_occupies [ a crm:P53_Place ;
         crm:P168_place_is_defined_by [ a crm:E94_Space_Primitive ] ;
@@ -27,17 +26,13 @@ Venues can contain each other in that sense that a building can contain one or m
         crm:P89_falls_within <http://data.performing-arts.ch/p/UUID2>
     ] ;
     crm:P46_is_composed_of <http://data.performing-arts.ch/o/UUID3> ;
-    crm:P108i_was_produced_by [ a crm:E12_Production ;
-    	crm:P4_has_time-span [ a crm:E52_Time-Span ;
-    		rdfs:label "1980" ;
-        	crm:P82a_begin_of_the_begin "1980-01-01"^^xsd:date .
-    	]
+    rico:hasBeginningDate [ a rico:Date ;
+        rico:normalizedDateValue "1980" ;
+        rico:dateStandard "ISO 8601" .
     ] ;
-    crm:P13i_was_destroyed_by [ a crm:E6_Destruction ;
-    	crm:P4_has_time-span [ a crm:E52_Time-Span ;
-    		rdfs:label "2100" ;
-        	crm:P82b_end_of_the_end "2100-12-31"^^xsd:date .
-    	]
+    rico:hasEndDate [ a rico:Date ;
+        rico:normalizedDateValue "1999" ;
+        rico:dateStandard "ISO 8601" .
     ] .
     
 <http://data.performing-arts.ch/a/UUID4> a crm:E40_Legal_Body, rico:CorporateBody ;

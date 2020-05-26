@@ -14,25 +14,36 @@ The following examples are not complete as documentation of the implementations 
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID1> a crm:E21_Person ,
-	rico:Person ;
+<http://data.performing-arts.ch/a/UUID1> a crm:E21_Person , rico:Person ;
     rdfs:label "Firstname Lastname" ;
-    rdfs:comment "profession" ;
     crm:P131_is_identified_by [ a crm:E82_Actor_Appellation ] ;
+    rico:birthDate [ a rico:Date ;
+        rico:normalizedDateValue "YYYY-MM-DD" ;
+        rico:dateStandard "ISO 8601" .
+    ] ;
     crm:P98i_was_born [ a crm:E67_Birth ;
-        crm:P4_has_time-span [ a crm:E52_Time-Span ] ;
         crm:P7_took_place_at <http://data.performing-arts.ch/p/UUID2>
     ] ;
+    rico:deathDate [ a rico:Date ;
+        rico:normalizedDateValue "YYYY-MM-DD" ;
+        rico:dateStandard "ISO 8601" .
+    ] ;
     crm:P100i_died_in [ a crm:E69_Death ;
-        crm:P4_has_time-span [ a crm:E52_Time-Span ] ;
         crm:P7_took_place_at <http://data.performing-arts.ch/p/UUID3>
     ] ;
+    crm:P3_has_note [
+        a crm:E62_String ;
+        crm:P2_has_type spav:eoept ;
+        rdf:value "decriptive information like progession or function"
+    ] ;
     crm:P107i_is_current_or_former_member_of <http://data.performing-arts.ch/g/gender/X> ,
-    	<http://data.performing-arts.ch/g/nation/XX>.
+        <http://data.performing-arts.ch/g/nation/XX>.
     owl:sameAs <http://www.wikidata.org/entity/Q123> ,
     <https://d-nb.info/gnd/123456789> , 
     <http://tls.theaterwissenschaft.ch/wiki/Firstname_Lastname> ;
 ```
+
+* `spav:eoept` = "description"
 
 Gender and nationality of a person are expressed as memberships in corresponding groups just as regular group memberships.
 
@@ -43,13 +54,19 @@ Gender and nationality of a person are expressed as memberships in corresponding
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body ,
-	rico:CorporateBody ;
+<http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body , rico:CorporateBody ;
     crm:P2_has_type spav:vrivu ;
     rdfs:label "Theatre ABC" ;
     crm:P131_is_identified_by [ a crm:E82_Actor_Appellation ] ;
-    crm:P95i_was_formed_by [ a crm:E66_Formation ] ;
-    crm:P99i_was_dissolved_by [ a crm:E68_Dissolution ] ;
+    crm:P131_is_identified_by [ a crm:E41_Appellation ] ;
+    rico:hasBeginningDate [ a rico:Date ;
+        rico:normalizedDateValue "1980" ;
+        rico:dateStandard "ISO 8601" .
+    ] ;
+    rico:hasEndDate [ a rico:Date ;
+        rico:normalizedDateValue "1999" ;
+        rico:dateStandard "ISO 8601" .
+    ] ;
     rico:isSuccessorOf <http://data.performing-arts.ch/a/UUID6> ;
     rico:controlledBy <http://data.performing-arts.ch/a/UUID7> ;
     crm:P107_has_current_or_former_member <http://data.performing-arts.ch/a/UUID8> ;
@@ -75,18 +92,17 @@ Gender and nationality of a person are expressed as memberships in corresponding
     ].
 
 [
-	a frbroo:F51_Pursuit ;
-	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> ;
-	frbroo:R59_had_typical_subject spav:mneyg.
+    a frbroo:F51_Pursuit ;
+    crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> ;
+    frbroo:R59_had_typical_subject spav:mneyg.
 ]
-
 ```
 
-* `spav:vrivu`= "artistic professional producer with own venue"
-* `spav:mneyg`= "spoken theatre"
-* `spav:ihtxc`= "address"
-* `spav:ihctx`= "website"
-* `spav:mujfv`= "management"
+* `spav:vrivu` = "artistic professional producer with own venue"
+* `spav:mneyg` = "spoken theatre"
+* `spav:ihtxc` = "address"
+* `spav:ihctx` = "website"
+* `spav:mujfv` = "management"
 
 A focus of a group on one or more genres is expressed as a `frbroo:F51_Pursuit`.
 
