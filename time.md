@@ -5,6 +5,8 @@ title: Time
 
 In the CIDOC-CRM any statement about time is at the end a statement about a time-span, which can be defined in regard to is maximum and minimum boundaries. Here only two properties are used to describe a `E52 Time-Span`: `crm:P82a_begin_of_the_begin` and `crm:P82b_end_of_the_end`. Additionally, `rdfs:label` is used to provide an easier access.
 
+<!-- TODO: change to end of begin and begin of end? -->
+
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
@@ -43,5 +45,5 @@ A `E52 Time-Span` is used for both defining a point in time like a specific date
 
 <!-- TODO: Model the temporal validity of a name. Difficult ... -->
 
-<!-- TODO: model a theatre season -->
+<!-- TODO: refer to theatre seasons -->
 

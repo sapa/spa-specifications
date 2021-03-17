@@ -74,6 +74,8 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in r
 
 #### Groups
 
+Groups can have an optional byline
+
 ```ttl
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
@@ -89,16 +91,15 @@ The CIDOC-CRM has one main class (`E41 Appellation`) and several subclasses in r
         rdf:value "KTB" ;
         crm:P2_has_type spav:yamqk
     ] ;
-    crm:P67_is_referred_to_by [
-    	a crm:E33_Linguistic_Object ;
-        rdf:value "Beschreibung des Theaters" ;
-        crm:P2_has_type spav:eoept
-    ] .
+    crm:P131_is_identified_by [ a crm:E41_Appellation ;
+    	crm:P2_has_type spav:yauzw ;
+    	rdf:value "A byline used by a group"
+    ] ;
 ```
 
 * `spav:yanuj` = "official name"
 * `spav:yamqk` = "acronym"
-* `spav:eoept` = "description"
+* `spav:yauzw` = "byline"
 
 #### Persons
 
@@ -146,6 +147,34 @@ Any literal value such as `rdfs:label` or `rdf:value` may be used with language 
         rdf:value "Fëdor Michajlovič Dostoevskij"@it
     ] .
 ```
+
+### Notes <a id="notes"></a>
+
+Most entities (like persons, groups, and venues) can have public and internal notes.
+
+```ttl
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix spav: <http://vocab.performing-arts.ch/> .
+
+<http://data.performing-arts.ch/a/UUID5> a crm:E39_Actor ;
+    crm:P3_has_note [ a crm:E62_String ;
+    	crm:P2_has_type spav:eoept ;
+    	rdf:value "any description that helps to identify an entity"
+    ] ;
+	crm:P3_has_note [ a crm:E62_String ;
+		crm:P2_has_type spav:eonvd ;
+		rdf:value "public note"
+	] ;
+	crm:P3_has_note [ a crm:E62_String ;
+		crm:P2_has_type spav:eokdx ;
+		rdf:value "internal note"
+	] .
+```
+
+* `spav:eoept` = "description"
+* `spav:eonvd` = "public note"
+* `spav:eokdx` = "internal note"
 
 <!-- TODO: Other examples, e.g. for work titles? -->
 

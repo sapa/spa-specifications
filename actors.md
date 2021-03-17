@@ -39,8 +39,9 @@ The following examples are not complete as documentation of the implementations 
     crm:P107i_is_current_or_former_member_of <http://data.performing-arts.ch/g/gender/X> ,
         <http://data.performing-arts.ch/g/nation/XX>.
     owl:sameAs <http://www.wikidata.org/entity/Q123> ,
-    <https://d-nb.info/gnd/123456789> , 
-    <http://tls.theaterwissenschaft.ch/wiki/Firstname_Lastname> ;
+    	<https://d-nb.info/gnd/123456789> , 
+    	<http://tls.theaterwissenschaft.ch/wiki/Firstname_Lastname> ;
+    rico:history "Biography of the person." .
 ```
 
 * `spav:eoept` = "description"
@@ -78,7 +79,7 @@ Gender and nationality of a person are expressed as memberships in corresponding
         rdf:value <http://www.theatre-abc.ch> ;
         crm_P2_has_type spav:ihctx
     ] ;
-    crm:P74_has_current_ or_former_residence [ a crm:Place ;
+    crm:P74_has_current_or_former_residence [ a crm:Place ;
         crm:P87_is_identified_by [ a crm:E45_Address ;
             rdf:value "Street, Place, Country" ;
             crm_P2_has_type spav:ihtxc
@@ -89,7 +90,8 @@ Gender and nationality of a person are expressed as memberships in corresponding
         crm:P2_has_type spav:mujfv ;
         crm:P16_used_specific_object <http://data.performing-arts.ch/o/UUID10> ;
         crm:P4_has_time-span [ a crm:E52_Time-Span ]
-    ].
+    ];
+    rico:history "History of the group." .
 
 [
     a frbroo:F51_Pursuit ;

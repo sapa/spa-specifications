@@ -28,11 +28,11 @@ In the case of a re-staging the plan refers to the work instance of the original
     crm:P2_has_type spav:mnawx ;
     frbroo:R12_is_realised_in <http://data.performing-arts.ch/w/UUID1> .
 
-<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance  ;
+<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance ;
     frbroo:R25_performed <http://data.performing-arts.ch/w/UUID1> ;
     crm:P9_consists_of <http://data.performing-arts.ch/w/UUID1/p/UUID2> .
     
-<http://data.performing-arts.ch/w/UUID1/p/UUID2> a frbroo:F31_Performance  ;
+<http://data.performing-arts.ch/w/UUID1/p/UUID2> a frbroo:F31_Performance ;
     crm:P2_has_type spav:hlosp ;
     crm:P4_has_time-span [ a crm:E52_Time-Span ;
 			rdfs:label "5.4.2017" ;
@@ -75,19 +75,19 @@ FRBRoo and CIDOC-CRM provide two ways to connect the individual performance work
     	crm:P2_has_type spav:mutnt ;
     	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID5> . ] .
 
-<http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body  ;
+<http://data.performing-arts.ch/a/UUID5> a crm:E40_Legal_Body ;
 	rdfs:label "Theater Matte" .
 
-<http://data.performing-arts.ch/a/UUID6> a crm:E21_Person  ;
+<http://data.performing-arts.ch/a/UUID6> a crm:E21_Person ;
 	rdfs:label "Oliver Stein" .
 
-<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance  ;
+<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance ;
     frbroo:R25_performed <http://data.performing-arts.ch/w/UUID1> ;
 	crm:P9_consists_of [ a crm:E7_Activity ;
     	crm:P2_has_type spav:munib ;
     	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID7> . ]
 
-<http://data.performing-arts.ch/a/UUID7> a crm:E21_Person  ;
+<http://data.performing-arts.ch/a/UUID7> a crm:E21_Person ;
 	rdfs:label "Markus Maria Enggist" .
 
 spav:muwgo a crm:E55_Type, skos:Concept ;
@@ -139,8 +139,8 @@ The [venue](venues) is linked with the default performance.
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix spav: <http://vocab.performing-arts.ch/> .
 
-<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance  ;
-	crm:P8_took_place_ on_or_within <http://data.performing-arts.ch/o/UUID2>
+<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance ;
+	crm:P8_took_place_on_or_within <http://data.performing-arts.ch/o/UUID2>
 
 <http://data.performing-arts.ch/o/UUID2> a crm:E22_Man-Made_Object ;
     rdfs:label "Theater Matte" ;
@@ -190,12 +190,12 @@ FRBRoo is also used to describe the literary reference of a production.
 	crm:P2_has_type spav:WORK-ADAPTION ;
     frbroo:R14_incorporates <http://data.performing-arts.ch/w/UUID5> .
 
-<http://data.performing-arts.ch/x/UUID3> a frbroo:F28_Expression_Creation  ;
+<http://data.performing-arts.ch/x/UUID3> a frbroo:F28_Expression_Creation ;
 	crm:P2_has_type spav:mudcw ;
 	frbroo:R17_created <http://data.performing-arts.ch/w/UUID2> ;
 	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID4> .
 
-<http://data.performing-arts.ch/a/UUID4> a crm:E21_Person  ;
+<http://data.performing-arts.ch/a/UUID4> a crm:E21_Person ;
 	rdfs:label "Corinne Thalmann" .
 
 <http://data.performing-arts.ch/w/UUID5> a frbroo:F22_Self-Contained_Expression ;
@@ -203,24 +203,24 @@ FRBRoo is also used to describe the literary reference of a production.
 	crm:P2_has_type spav:WORK-TRANSLATION ;
     frbroo:R14_incorporates <http://data.performing-arts.ch/w/UUID8> .
 
-<http://data.performing-arts.ch/x/UUID6> a frbroo:F28_Expression_Creation  ;
+<http://data.performing-arts.ch/x/UUID6> a frbroo:F28_Expression_Creation ;
 	crm:P2_has_type spav:muwyo ;
 	frbroo:R17_created <http://data.performing-arts.ch/w/UUID5> ;
 	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID7> .
 
-<http://data.performing-arts.ch/a/UUID7> a crm:E21_Person  ;
+<http://data.performing-arts.ch/a/UUID7> a crm:E21_Person ;
 	rdfs:label "Stefanie Gerhold" .
 
 <http://data.performing-arts.ch/w/UUID8> a frbroo:F22_Self-Contained_Expression ;
 	rdfs:label "El mètode Grönholm" .
 	crm:P2_has_type spav:WORK-ORIGINAL .
 
-<http://data.performing-arts.ch/x/UUID9> a frbroo:F28_Expression_Creation  ;
+<http://data.performing-arts.ch/x/UUID9> a frbroo:F28_Expression_Creation ;
 	crm:P2_has_type spav:muiuk ;
 	frbroo:R17_created <http://data.performing-arts.ch/w/UUID8> ;
 	crm:P14_carried_out_by <http://data.performing-arts.ch/a/UUID10> .
 
-<http://data.performing-arts.ch/a/UUID10> a crm:E21_Person  ;
+<http://data.performing-arts.ch/a/UUID10> a crm:E21_Person ;
 	rdfs:label "Jordi Galceran" .
 
 spav:mudcw a crm:E55_Type, skos:Concept ;
@@ -248,16 +248,16 @@ While each `F22 Self-Contained Expression` according to FRBRoo comes with a `F1 
     rdfs:label "Die Grönholm-Methode" ;
     frbroo:R14_incorporates <http://data.performing-arts.ch/w/UUID2> .
 
-<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance  ;
+<http://data.performing-arts.ch/w/UUID1/p> a frbroo:F31_Performance ;
     frbroo:R25_performed <http://data.performing-arts.ch/w/UUID1> ;
     crm:P9_consists_of <http://data.performing-arts.ch/w/UUID1/p/UUID2> .
 
-<http://data.performing-arts.ch/w/UUID1/p/UUID2> a frbroo:F31_Performance  ;
+<http://data.performing-arts.ch/w/UUID1/p/UUID2> a frbroo:F31_Performance ;
     crm:P4_has_time-span [ a crm:E52_Time-Span ;
         rdfs:label "5.4.2017" .
     ] .
 
-<http://data.performing-arts.ch/w/UUID3> a frbroo:F29_Recording_Event  ;
+<http://data.performing-arts.ch/w/UUID3> a frbroo:F29_Recording_Event ;
     frbroo:R20_recorded <http://data.performing-arts.ch/w/UUID1/p/UUID2> ;
 	crm:P9_consists_of <http://data.performing-arts.ch/w/UUID4> .
 
@@ -269,7 +269,7 @@ While each `F22 Self-Contained Expression` according to FRBRoo comes with a `F1 
 <http://data.performing-arts.ch/a/UUID5> a crm:P21_Person ;
 	rdfs:label "NN" .
 
-<http://data.performing-arts.ch/w/UUID6> a frbroo:F21_Recording_Work  .
+<http://data.performing-arts.ch/w/UUID6> a frbroo:F21_Recording_Work .
 
 spav:mujig a crm:E55_Type, skos:Concept ;
     skos:prefLabel "camera operation"@en .

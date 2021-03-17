@@ -3,6 +3,8 @@ layout: page
 title: Places
 ---
 
+<!-- TODO: also use RiC -->
+
 According to the CIDOC-CRM place are "extents in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter". We distinguish between three kinds of places:
 
 * Official administrative entities such as municipalities, districts, canton, and countries.
@@ -17,7 +19,7 @@ A legal body in the city of Bern:
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://data.performing-arts.ch/a/UUID1> a crm:E40_Legal_Body ;
-    crm:P74_has_current _or_former_residence [ a crm:E53_Place ;
+    crm:P74_has_current_or_former_residence [ a crm:E53_Place ;
         crm:P89_falls_within <http://data.performing-arts.ch/p/UUID2> ;
         crm:P87_is_identified_by [ a crm:E45_Address ;
             rdf:value "Some Street, 3001 Bern"
