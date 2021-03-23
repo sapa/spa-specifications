@@ -134,7 +134,7 @@ The description on the content still uses several properties that derive from le
 
 ### Archival processing <a id="archival-processing"></a>
 
-The description of archival processes has to be adjusted to the final version of RiC.
+ Temporarily, some information from a legacy database was stored in an own, informal ontology (`spoa`). These properties should later to transfered into RiC, once the standard is finalized.
 
 ```ttl
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
@@ -175,10 +175,9 @@ The description of archival processes has to be adjusted to the final version of
 * `spav:pkba4` = "box A4"
 * `spav:umbox` = "boxes"
 
-
 ### Rights and permissions <a id="rights-permissions"></a>
 
-Also contains lecagy fields but mostly with controlled vocabularies that will be adjusted to the final version of RiC.
+Also contains lecagy fields but mostly with controlled vocabularies that should be transfered into the final version of RiC.
 
 ```ttl
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#> .

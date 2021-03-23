@@ -18,11 +18,11 @@ The implementation of these models is guided by the following ideas:
 The documentation is structured along the following basic concepts:
 
 * [Actors/Agents](actors) (individual persons, groups, institutions)
+* [Records](records)
+* Objects (incl. [venues](venues), archival [objects](objects) including [videos](videos))
 * [Works](works) (performing arts works and their originals such as written plays or musical compositions)
 * [Seasons](seasons)
-* Objects (incl. [Venues](venues))
 * [Places](places)
-* [Records](records)
 
 ###  General Concepts <a id="general-concepts"></a>
 
@@ -30,7 +30,5 @@ Some concepts apply to more or less to all entities:
 
 * [Identities (types, identifiers, appellations)](identities)
 * [Time](time)
-* Spatial Coordinates
-* Dimension
 
 RDF sample code is in turtle syntax and covers only the aspects that are relevant in the respective context.
