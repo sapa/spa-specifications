@@ -46,7 +46,7 @@ Videos are also described as [objects](objects).
 	rico:hasDerivedInstantiation <http://data.performing-arts.ch/o/UUID4>, <https://vimeo.com/123456> .
 
 <http://data.performing-arts.ch/o/UUID5> a premis:File, ebucore:MediaResource ;
-	premis:inIncludedIn <http://data.performing-arts.ch/o/UUID3> ;
+	premis:isIncludedIn <http://data.performing-arts.ch/o/UUID3> ;
 	premis:originalName "207-9-DIG-SKD.mkv" .
 
 <http://data.performing-arts.ch/o/UUID4> a rico:Instantiation, premis:Representation ;
