@@ -9,7 +9,7 @@ The future database of the [SAPA Foundation](https://www.sapa.swiss "Swiss Archi
 The implementation of these models is guided by the following ideas:
 
 * Classes and properties come from the three reference ontologies.
-* They are further specified by a domain-specific [vocabulary](https://sapa.github.io/spa-vocabulary/).
+* They are further specified by a domain-specific [vocabulary](http://vocab.performing-arts.ch/).
 * There is a distinction between core entities (such as persons or works) that should be publicly addressable and entities (such as appellations) that serve primarily auxiliary functions. The latter are represented by special URIs and are shown here as blank nodes.
 * Make individual decisions in which case complexity is actually needed. If this is the case, think about providing a reduced version of the same information in a simple way. (Names are a good example here. They can be pretty complicated but sometimes one just needs a simple label.)
 
