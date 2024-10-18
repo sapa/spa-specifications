@@ -6,7 +6,7 @@ exclude_from_nav: 'true'
 
 The future database of the [SAPA Foundation](https://www.sapa.swiss "Swiss Archive of the Performing Arts") will be published as linked data and build on the conceptual models [CIDOC-CRM](http://www.cidoc-crm.org), [FBBRoo](https://www.ifla.org/publications/node/11240) and [RiC](https://www.ica.org/en/egad-ric-conceptual-model "Records in Context"). As RiC is still in development, its classes and properties may be substituted with equivalents from [ORE](http://www.openarchives.org/ore/1.0/vocabulary), [PREMIS](http://id.loc.gov/ontologies/premis.html), [PROV](http://www.w3.org/TR/prov-overview/) and [RDA](http://www.rdaregistry.info) for the time being.
 
-SHACL : http://shapes.performing-arts.ch/
+[SHACL](https://www.w3.org/TR/shacl/) : [http://shapes.performing-arts.ch](http://shapes.performing-arts.ch)
 
 The implementation of these models is guided by the following ideas:
 
